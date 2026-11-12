@@ -1,0 +1,52 @@
+WORKING WITH APACHE PARQUET FILES
+==================================
+
+Every data file in this delivery (anything ending in .parquet) is in Apache
+Parquet format: a compressed, column-oriented binary table format. It is not
+a text file and will look like garbled binary data if you open it in a plain
+text editor - that is expected and does not mean the file is damaged.
+
+Python (pandas) - the simplest route for most people:
+
+    pip install pandas pyarrow
+    import pandas as pd
+    df = pd.read_parquet("subjects.parquet")
+    df.head()
+
+Python (polars) - faster for large files:
+
+    pip install polars
+    import polars as pl
+    df = pl.read_parquet("subjects.parquet")
+
+R:
+
+    install.packages("arrow")
+    library(arrow)
+    df <- read_parquet("subjects.parquet")
+
+Command line, no programming, just to look at a file's structure and a few
+rows (via DuckDB, a free single-file database engine):
+
+    duckdb -c "DESCRIBE SELECT * FROM 'subjects.parquet';"
+    duckdb -c "SELECT * FROM 'subjects.parquet' LIMIT 10;"
+
+Command line SQL queries directly against the files, including joins across
+multiple parquet files by subject_id, also via DuckDB:
+
+    duckdb -c "
+      SELECT s.drug, s.arm, AVG(m.Cmax_true) AS mean_cmax
+      FROM 'subjects.parquet' s
+      JOIN 'truth_pk_metrics.parquet' m USING (subject_id)
+      GROUP BY s.drug, s.arm;
+    "
+
+Excel / spreadsheet software does not open Parquet files natively. Convert
+to CSV first if you need a spreadsheet view (note: for the larger tables -
+observations.parquet in particular - a CSV conversion will be a much larger
+file than the Parquet original, since Parquet's compression is removed):
+
+    python -c "import pandas as pd; pd.read_parquet('subjects.parquet').to_csv('subjects.csv', index=False)"
+
+Full column-by-column definitions for every table in this delivery are in
+schema.csv, in the same folder as this file.

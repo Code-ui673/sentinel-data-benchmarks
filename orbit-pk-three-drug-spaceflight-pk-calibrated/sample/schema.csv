@@ -1,0 +1,52 @@
+table,column,type,unit,description,origin
+subjects,subject_id,str,,Unique identifier for one simulated subject. Format SSPK-NNNNNN; stable join key used across every table in this delivery.,key
+subjects,drug,str,,"One of acetaminophen, scopolamine, zolpidem.",label
+subjects,arm,str,,GROUND (baseline) or FLIGHT (in-flight microgravity perturbation applied). Zolpidem and the scopolamine PATCH route have no FLIGHT arm - see Scope of the model.,label
+subjects,route,str,,"ORAL or PATCH (transdermal). PATCH exists only for scopolamine (GROUND only, no in-flight patch calibration data exists). Acetaminophen and zolpidem are ORAL only.",label
+subjects,dose_mg,float64,mg,"For ORAL subjects: the single oral dose administered (650 mg acetaminophen; 0.4 mg scopolamine; 10 mg zolpidem - standard single therapeutic doses). For PATCH subjects: the TOTAL dose delivered over the full patch-wear period (1.0 mg over 72 hours, matching the FDA Transderm Scop label), not a per-hour rate.",label
+subjects,body_weight_kg,float64,kg,"This subject's body weight. Acetaminophen and scopolamine subjects: individually drawn from a published adult weight distribution (mean ~75kg, not a flat value - see the Data Passport's covariate section). Zolpidem subjects: standardised flat 70kg for every subject (disclosed scope limitation - no weight covariate for zolpidem, see Scope of the model).",scan design / model output
+subjects,age_years,float64,years,"This subject's age. Populated (drawn from a published adult age distribution) for acetaminophen subjects only, where the source population-PK model includes an age covariate. NULL for scopolamine and zolpidem subjects (disclosed - no age covariate exists in those drugs' source models).",model output
+truth_pk_parameters,subject_id,str,,Join key - see subjects.subject_id.,key
+truth_pk_parameters,drug,str,,See subjects.drug.,label
+truth_pk_parameters,arm,str,,See subjects.arm.,label
+truth_pk_parameters,route,str,,See subjects.route.,label
+truth_pk_parameters,ka_true,float64,1/hour,"This subject's TRUE (noise-free) absorption rate constant, after between-subject variability, any covariate effects, and (for FLIGHT subjects) the microgravity perturbation factor have all been applied. NULL for PATCH-route subjects (a patch has no absorption-rate constant - it delivers at a constant zero-order rate; see route).",model output
+truth_pk_parameters,F_true,float64,fraction,This subject's TRUE absolute oral bioavailability (0 to 1). NULL for PATCH-route subjects (bioavailability is not a meaningful parameter for a route modelled as direct zero-order delivery into the central compartment; see the Data Passport's Honest Limitations section).,model output
+truth_pk_parameters,CL_true,float64,L/hour,"This subject's TRUE systemic clearance, including any covariate effects (age/sex/weight/renal-function, where that drug's source model includes them).",model output
+truth_pk_parameters,V1_true,float64,L,This subject's TRUE central-compartment volume of distribution.,model output
+truth_pk_parameters,Q_true,float64,L/hour,This subject's TRUE intercompartmental clearance between the central and peripheral compartment.,model output
+truth_pk_parameters,V2_true,float64,L,This subject's TRUE peripheral-compartment volume of distribution.,model output
+truth_pk_parameters,f_ka_applied,float64,dimensionless ratio,"The microgravity perturbation factor actually applied to ka for this subject (1.0 for every GROUND subject by construction; NULL for PATCH subjects, which have no ka).",derived
+truth_pk_parameters,f_F_applied,float64,dimensionless ratio,"The microgravity perturbation factor actually applied to bioavailability for this subject (1.0 for every GROUND subject by construction; NULL for PATCH subjects, which have no F).",derived
+truth_pk_parameters,f_CL_applied,float64,dimensionless ratio,The microgravity perturbation factor actually applied to clearance for this subject (1.0 for every GROUND subject by construction).,derived
+truth_pk_parameters,perturbation_source_study,str,,Which real published in-flight human study this subject's perturbation triple was resampled from (acetaminophen FLIGHT subjects only; see the Data Passport for the four source studies). N/A_GROUND for every GROUND subject; N/A_NO_FLIGHT_DATA_FOR_ZOLPIDEM for every zolpidem subject (no flight arm exists for this drug); N/A_NO_FLIGHT_DATA_FOR_PATCH for every scopolamine PATCH subject (no in-flight patch comparison exists in the published literature).,label
+truth_pk_parameters,mission_duration_class,str,,"For acetaminophen FLIGHT subjects only: which mission-duration literature cluster this subject's perturbation was drawn from - short_duration_shuttle (Cintron 1987a, short Shuttle missions) or long_duration_station (Kovachevich 2009 + Polyakov 2021, long-duration station missions). N/A_GROUND for every GROUND subject across all three drugs.",label
+truth_pk_metrics,subject_id,str,,Join key - see subjects.subject_id.,key
+truth_pk_metrics,Cmax_true,float64,mg/L,"This subject's TRUE (noise-free) maximum plasma concentration over the observation window used for this subject's route (24h for ORAL, 96h for PATCH - see the Data Passport).",model output
+truth_pk_metrics,Tmax_true,float64,hour,This subject's TRUE time of maximum plasma concentration.,model output
+truth_pk_metrics,AUC_true,float64,mg*hour/L,"This subject's TRUE area under the concentration-time curve, extrapolated to infinity.",model output
+truth_pk_metrics,lambda_z_true,float64,1/hour,This subject's TRUE terminal (log-linear) elimination rate constant.,model output
+truth_pk_metrics,t_half_true,float64,hour,This subject's TRUE terminal elimination half-life (ln 2 / lambda_z_true).,derived
+observations,subject_id,str,,Join key - see subjects.subject_id.,key
+observations,sample_time_h,float64,hour,"Nominal blood-draw time. Twelve points per subject, on one of two fixed route-specific sampling schedules (0.25-24h for ORAL subjects; 2-96h for PATCH subjects, matching the longer patch-wear/decay window) - see the Data Passport.",scan design
+observations,concentration_observed,float64,mg/L,"Simulated ""observed"" plasma concentration at this sample time: the TRUE concentration at that time, with drug-appropriate proportional assay noise added and clipped at zero. This column is never bit-identical to any truth_pk_metrics or truth_pk_parameters value - see the Validation Report's leakage-separation checks.",derived
+outcomes,subject_id,str,,Join key - see subjects.subject_id.,key
+outcomes,drug,str,,See subjects.drug.,label
+outcomes,arm,str,,See subjects.arm.,label
+outcomes,route,str,,See subjects.route.,label
+outcomes,cmax_reference_lo,float64,mg/L,"Lower bound of the 2.5th-97.5th percentile reference interval for Cmax_true, computed from this drug AND ROUTE's own GROUND-arm subjects in this dataset (computed per drug+route, not drug alone, so the scopolamine ORAL and PATCH routes - which have very different absolute concentration scales - each get their own, comparable reference band).",derived
+outcomes,cmax_reference_hi,float64,mg/L,Upper bound of the same Cmax reference interval.,derived
+outcomes,auc_reference_lo,float64,mg*hour/L,"Lower bound of the 2.5th-97.5th percentile reference interval for AUC_true, computed per drug+route (see cmax_reference_lo).",derived
+outcomes,auc_reference_hi,float64,mg*hour/L,Upper bound of the same AUC reference interval.,derived
+outcomes,cmax_vs_reference_ratio,float64,dimensionless ratio,This subject's Cmax_true divided by the midpoint of its drug+route's reference interval.,derived
+outcomes,auc_vs_reference_ratio,float64,dimensionless ratio,This subject's AUC_true divided by the midpoint of its drug+route's reference interval.,derived
+outcomes,cmax_outcome,str,,"BELOW_REFERENCE_RANGE, WITHIN_REFERENCE_RANGE, or ABOVE_REFERENCE_RANGE for Cmax_true against this drug+route's own GROUND-arm reference interval. This is a descriptive comparison against this cohort's own baseline, not a clinical safety or toxicity classification - see Scope of the model.",derived
+outcomes,auc_outcome,str,,Same three-way classification for AUC_true.,derived
+zolpidem_multidose_steady_state,subject_id,str,,Join key - see subjects.subject_id. Every zolpidem subject has exactly one row here (zolpidem is the only drug in this dataset with a multi-dose steady-state table).,key
+zolpidem_multidose_steady_state,n_doses,int64,count,Number of nightly doses simulated to reach this subject's steady state (7 nightly doses).,scan design
+zolpidem_multidose_steady_state,tau_h,float64,hour,The nightly dosing interval used (24 hours).,scan design
+zolpidem_multidose_steady_state,Cmax_steady_state,float64,mg/L,This subject's TRUE peak plasma concentration within the final (steady-state) dosing interval.,model output
+zolpidem_multidose_steady_state,Cmin_steady_state,float64,mg/L,This subject's TRUE trough plasma concentration at the end of the final dosing interval (immediately before the next nightly dose).,model output
+zolpidem_multidose_steady_state,AUC_tau_steady_state,float64,mg*hour/L,This subject's TRUE area under the curve over one full dosing interval (tau) at steady state.,model output
+zolpidem_multidose_steady_state,accumulation_ratio_observed,float64,dimensionless ratio,This subject's steady-state AUC_tau divided by their single-dose AUC_true (from truth_pk_metrics) - the actual simulated accumulation after repeated nightly dosing.,derived
+zolpidem_multidose_steady_state,accumulation_ratio_theoretical,float64,dimensionless ratio,"The theoretical accumulation ratio for a linear one-compartment-equivalent system, 1/(1-exp(-lambda_z*tau)), computed from this subject's own lambda_z_true and the 24h dosing interval - included so the observed ratio above can be checked against the closed-form prediction (see the Validation Report).",derived
