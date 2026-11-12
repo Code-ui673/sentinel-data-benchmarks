@@ -1,0 +1,405 @@
+state_id,claim_id,state_date,known_coverages,determined_primary,determined_secondary,primary_paid,secondary_paid,patient_responsibility,trigger_event
+S000027_0,C000027,2025-05-25,"[""CV001543_0"", ""CV001543_1""]",employer_011,employer_029,646.96,0.0,71.88,initial_adjudication
+S000027_1,C000027,2025-07-11,"[""CV001543_0"", ""CV001543_1""]",employer_029,employer_011,646.96,0.0,71.88,post_payment_review
+S000084_0,C000084,2024-03-02,"[""CV002326_0"", ""CV002326_1""]",employer_020,medicare,118.55,0.0,13.17,initial_adjudication
+S000103_0,C000103,2025-02-18,"[""CV000536_0"", ""CV000536_1""]",employer_025,medicare,9.02,0.0,1.0,initial_adjudication
+S000121_0,C000121,2025-10-17,"[""CV001130_0"", ""CV001130_2"", ""CV001130_3""]",employer_020,medicare,281.29,0.0,31.25,initial_adjudication
+S000138_0,C000138,2024-08-10,"[""CV002315_0""]",medicare,,2117.92,0.0,529.48,initial_adjudication
+S000154_0,C000154,2024-10-20,"[""CV000149_0"", ""CV000149_1""]",medicare,medicaid_01,357.34,0.0,89.33,initial_adjudication
+S000157_0,C000157,2024-04-27,"[""CV001776_0"", ""CV001776_1""]",employer_020,medicare,380.5,0.0,42.28,initial_adjudication
+S000175_0,C000175,2025-12-12,"[""CV001067_0"", ""CV001067_1""]",employer_027,medicare,292.33,0.0,32.48,initial_adjudication
+S000177_0,C000177,2024-04-06,"[""CV000664_0"", ""CV000664_1"", ""CV000664_2"", ""CV000664_3""]",medicaid_01,employer_023,1109.61,706.12,201.75,initial_adjudication
+S000177_1,C000177,2024-05-22,"[""CV000664_0"", ""CV000664_1"", ""CV000664_2"", ""CV000664_3""]",employer_023,employer_003,1815.73,0.0,201.75,post_payment_review
+S000237_0,C000237,2024-12-04,"[""CV002178_0"", ""CV002178_1""]",medicaid_00,medicare,1002.74,455.79,364.63,initial_adjudication
+S000237_1,C000237,2025-01-09,"[""CV002178_0"", ""CV002178_1""]",medicare,medicaid_00,1458.53,0.0,364.63,post_payment_review
+S000242_0,C000242,2025-12-20,"[""CV001043_0"", ""CV001043_1""]",employer_002,employer_029,370.94,0.0,41.21,initial_adjudication
+S000242_1,C000242,2026-03-17,"[""CV001043_0"", ""CV001043_1""]",employer_029,employer_002,370.94,0.0,41.21,post_payment_review
+S000264_0,C000264,2024-11-02,"[""CV001764_0"", ""CV001764_1""]",medicaid_00,medicare,213.11,96.87,77.49,initial_adjudication
+S000264_1,C000264,2024-12-24,"[""CV001764_0"", ""CV001764_1""]",medicare,medicaid_00,309.98,0.0,77.49,post_payment_review
+S000299_0,C000299,2024-10-27,"[""CV001915_0"", ""CV001915_1""]",medicaid_03,medicare,45.92,20.87,16.7,initial_adjudication
+S000299_1,C000299,2024-11-28,"[""CV001915_0"", ""CV001915_1""]",medicare,medicaid_03,66.79,0.0,16.7,post_payment_review
+S000312_0,C000312,2024-08-08,"[""CV001061_0"", ""CV001061_1""]",medicare,medicaid_02,262.83,0.0,65.71,initial_adjudication
+S000345_0,C000345,2024-07-24,"[""CV002317_0"", ""CV002317_1""]",medicare,medicaid_04,809.71,0.0,202.43,initial_adjudication
+S000374_0,C000374,2024-09-17,"[""CV001010_0"", ""CV001010_1""]",employer_006,medicare,840.05,0.0,93.34,initial_adjudication
+S000374_1,C000374,2024-09-20,"[""CV001010_0"", ""CV001010_1"", ""CV001010_2""]",auto_00,employer_006,746.71,93.34,93.34,coverage_discovered
+S000414_0,C000414,2024-02-22,"[""CV001641_0"", ""CV001641_1""]",medicare,medicaid_00,88.21,0.0,22.05,initial_adjudication
+S000477_0,C000477,2025-07-20,"[""CV001268_0"", ""CV001268_1"", ""CV001268_2""]",employer_025,medicare,956.69,0.0,106.3,initial_adjudication
+S000497_0,C000497,2024-05-29,"[""CV000637_0"", ""CV000637_1""]",medicare,medicaid_04,48.62,0.0,12.16,initial_adjudication
+S000510_0,C000510,2025-11-19,"[""CV001911_0"", ""CV001911_1""]",medicare,medicaid_02,1978.78,0.0,494.69,initial_adjudication
+S000512_0,C000512,2025-07-27,"[""CV000153_0"", ""CV000153_1""]",medicaid_00,medicare,45.33,20.6,16.48,initial_adjudication
+S000512_1,C000512,2025-10-22,"[""CV000153_0"", ""CV000153_1""]",medicare,medicaid_00,65.93,0.0,16.48,post_payment_review
+S000517_0,C000517,2025-07-30,"[""CV001905_0"", ""CV001905_1"", ""CV001905_2""]",employer_007,medicare,210.62,0.0,23.4,initial_adjudication
+S000534_0,C000534,2025-04-01,"[""CV001319_0"", ""CV001319_1""]",employer_007,employer_004,941.83,0.0,104.65,initial_adjudication
+S000556_0,C000556,2025-11-28,"[""CV002063_0"", ""CV002063_1""]",employer_028,medicare,151.2,0.0,16.8,initial_adjudication
+S000558_0,C000558,2024-11-10,"[""CV002391_0"", ""CV002391_1""]",employer_025,medicare,236.26,0.0,26.25,initial_adjudication
+S000574_0,C000574,2024-05-18,"[""CV000522_0"", ""CV000522_1""]",medicare,medicaid_02,343.36,0.0,85.84,initial_adjudication
+S000581_0,C000581,2025-05-10,"[""CV001245_0"", ""CV001245_1""]",medicaid_03,medicare,72.47,32.95,26.35,initial_adjudication
+S000581_1,C000581,2025-07-25,"[""CV001245_0"", ""CV001245_1""]",medicare,medicaid_03,105.42,0.0,26.35,post_payment_review
+S000600_0,C000600,2024-02-24,"[""CV001441_0"", ""CV001441_1""]",employer_022,employer_002,207.89,0.0,23.1,initial_adjudication
+S000600_1,C000600,2024-04-24,"[""CV001441_0"", ""CV001441_1""]",employer_002,employer_022,207.89,0.0,23.1,post_payment_review
+S000619_0,C000619,2024-11-25,"[""CV000853_0"", ""CV000853_1""]",employer_019,medicare,366.48,0.0,40.72,initial_adjudication
+S000619_1,C000619,2024-12-07,"[""CV000853_0""]",medicare,,325.76,0.0,81.44,retroactive_termination_recorded
+S000650_0,C000650,2025-03-06,"[""CV000708_0"", ""CV000708_1""]",medicare,medicaid_00,539.6,0.0,134.9,initial_adjudication
+S000658_0,C000658,2025-02-22,"[""CV000413_0"", ""CV000413_1""]",employer_003,medicare,473.08,0.0,52.57,initial_adjudication
+S000665_0,C000665,2024-09-29,"[""CV001420_0"", ""CV001420_1"", ""CV001420_2""]",medicare,employer_003,86.62,10.82,10.83,initial_adjudication
+S000665_1,C000665,2024-12-15,"[""CV001420_0"", ""CV001420_1"", ""CV001420_2""]",employer_003,medicare,97.44,0.0,10.83,post_payment_review
+S000678_0,C000678,2025-09-20,"[""CV000433_0"", ""CV000433_1""]",medicare,medicaid_04,430.61,0.0,107.65,initial_adjudication
+S000683_0,C000683,2025-02-20,"[""CV001108_0"", ""CV001108_1""]",medicare,medicaid_03,1179.06,0.0,294.77,initial_adjudication
+S000741_0,C000741,2025-08-15,"[""CV000318_0"", ""CV000318_1""]",employer_010,medicare,623.24,0.0,69.25,initial_adjudication
+S000741_1,C000741,2025-08-21,"[""CV000318_0""]",medicare,,553.99,0.0,138.5,retroactive_termination_recorded
+S000751_0,C000751,2025-04-03,"[""CV001490_0"", ""CV001490_1""]",employer_008,employer_001,613.09,0.0,68.12,initial_adjudication
+S000755_0,C000755,2024-11-27,"[""CV002233_0"", ""CV002233_1""]",medicaid_00,medicare,80.47,36.58,29.26,initial_adjudication
+S000755_1,C000755,2025-02-26,"[""CV002233_0"", ""CV002233_1""]",medicare,medicaid_00,117.05,0.0,29.26,post_payment_review
+S000763_0,C000763,2024-07-03,"[""CV001906_0"", ""CV001906_1""]",medicaid_03,medicare,741.88,337.22,269.77,initial_adjudication
+S000763_1,C000763,2024-08-04,"[""CV001906_0"", ""CV001906_1""]",medicare,medicaid_03,1079.1,0.0,269.77,post_payment_review
+S000790_0,C000790,2024-12-18,"[""CV001456_0"", ""CV001456_1""]",medicare,employer_022,286.65,35.83,35.83,initial_adjudication
+S000790_1,C000790,2025-03-20,"[""CV001456_0"", ""CV001456_1""]",employer_022,medicare,322.48,0.0,35.83,post_payment_review
+S000813_0,C000813,2024-09-08,"[""CV000695_0"", ""CV000695_1"", ""CV000695_2""]",employer_003,medicare,580.54,0.0,64.5,initial_adjudication
+S000814_0,C000814,2025-06-17,"[""CV002344_0"", ""CV002344_1""]",medicare,medicaid_02,1901.87,0.0,475.47,initial_adjudication
+S000815_0,C000815,2025-10-30,"[""CV001202_0"", ""CV001202_1""]",medicare,medicaid_02,307.81,0.0,76.95,initial_adjudication
+S000820_0,C000820,2024-08-14,"[""CV000529_0""]",medicare,,1378.14,0.0,344.53,initial_adjudication
+S000856_0,C000856,2025-07-02,"[""CV000386_0"", ""CV000386_1""]",medicare,medicaid_00,62.42,0.0,15.6,initial_adjudication
+S000862_0,C000862,2024-05-26,"[""CV001061_0"", ""CV001061_1""]",medicare,medicaid_02,2312.02,0.0,578.01,initial_adjudication
+S000863_0,C000863,2025-05-12,"[""CV002240_0"", ""CV002240_1""]",medicare,medicaid_03,1292.34,0.0,323.09,initial_adjudication
+S000871_0,C000871,2024-04-20,"[""CV002252_0"", ""CV002252_2""]",employer_022,medicare,771.13,0.0,85.68,initial_adjudication
+S000871_1,C000871,2025-01-08,"[""CV002252_0"", ""CV002252_1"", ""CV002252_2""]",employer_029,employer_022,771.13,0.0,85.68,coverage_discovered
+S000889_0,C000889,2024-12-20,"[""CV000307_0"", ""CV000307_1""]",employer_001,medicare,803.04,0.0,89.23,initial_adjudication
+S000889_1,C000889,2025-01-11,"[""CV000307_0""]",medicare,,713.82,0.0,178.45,retroactive_termination_recorded
+S000892_0,C000892,2025-10-13,"[""CV000231_0""]",medicare,,246.9,0.0,61.72,initial_adjudication
+S000903_0,C000903,2025-09-30,"[""CV000936_0"", ""CV000936_1"", ""CV000936_2""]",employer_005,medicare,323.25,0.0,35.92,initial_adjudication
+S000944_0,C000944,2025-08-24,"[""CV001113_0"", ""CV001113_1""]",medicare,medicaid_03,129.25,0.0,32.31,initial_adjudication
+S000949_0,C000949,2025-07-24,"[""CV001341_0"", ""CV001341_1"", ""CV001341_2""]",employer_027,employer_013,474.07,0.0,52.67,initial_adjudication
+S001013_0,C001013,2025-06-29,"[""CV000335_0""]",medicare,,1841.84,0.0,460.46,initial_adjudication
+S001022_0,C001022,2025-09-06,"[""CV001054_0"", ""CV001054_1""]",employer_029,employer_007,107.25,0.0,11.92,initial_adjudication
+S001051_0,C001051,2025-04-14,"[""CV001526_0"", ""CV001526_1""]",employer_012,medicare,99.38,0.0,11.04,initial_adjudication
+S001057_0,C001057,2024-08-07,"[""CV000208_0"", ""CV000208_1""]",employer_012,employer_008,222.46,0.0,24.72,initial_adjudication
+S001064_0,C001064,2024-04-28,"[""CV000385_0"", ""CV000385_1""]",medicare,medicaid_04,585.47,0.0,146.37,initial_adjudication
+S001067_0,C001067,2024-12-01,"[""CV002352_0""]",medicare,,63.12,0.0,15.78,initial_adjudication
+S001072_0,C001072,2024-08-15,"[""CV000840_0"", ""CV000840_1""]",medicare,medicaid_02,183.85,0.0,45.96,initial_adjudication
+S001118_0,C001118,2025-12-08,"[""CV000328_0"", ""CV000328_1""]",employer_029,medicare,192.37,0.0,21.37,initial_adjudication
+S001141_0,C001141,2024-04-15,"[""CV001804_0"", ""CV001804_1"", ""CV001804_2""]",employer_007,medicare,226.4,0.0,25.16,initial_adjudication
+S001150_0,C001150,2024-10-29,"[""CV001313_0"", ""CV001313_1""]",employer_015,employer_024,386.44,0.0,42.94,initial_adjudication
+S001150_1,C001150,2024-12-05,"[""CV001313_0"", ""CV001313_1""]",employer_024,employer_015,386.44,0.0,42.94,post_payment_review
+S001163_0,C001163,2024-11-06,"[""CV001977_0"", ""CV001977_1""]",employer_002,medicare,317.77,0.0,35.31,initial_adjudication
+S001164_0,C001164,2024-05-28,"[""CV001385_0"", ""CV001385_1""]",medicare,employer_022,1737.22,217.15,217.15,initial_adjudication
+S001164_1,C001164,2024-07-31,"[""CV001385_0"", ""CV001385_1""]",employer_022,medicare,1954.37,0.0,217.15,post_payment_review
+S001166_0,C001166,2024-12-30,"[""CV002098_0""]",medicare,,49.86,0.0,12.46,initial_adjudication
+S001170_0,C001170,2025-08-19,"[""CV000333_0"", ""CV000333_1"", ""CV000333_2""]",workers_comp_02,medicare,1172.46,0.0,0.0,initial_adjudication
+S001179_0,C001179,2025-06-30,"[""CV000260_0"", ""CV000260_1"", ""CV000260_2""]",medicaid_00,employer_011,127.12,80.9,23.11,initial_adjudication
+S001179_1,C001179,2025-08-05,"[""CV000260_0"", ""CV000260_1"", ""CV000260_2""]",employer_011,medicare,208.02,0.0,23.11,post_payment_review
+S001186_0,C001186,2025-11-12,"[""CV001519_0"", ""CV001519_1""]",employer_005,employer_008,519.87,0.0,57.76,initial_adjudication
+S001191_0,C001191,2025-08-29,"[""CV002230_0"", ""CV002230_2""]",medicare,employer_024,1484.82,185.61,185.6,initial_adjudication
+S001191_1,C001191,2025-12-08,"[""CV002230_0"", ""CV002230_2""]",employer_024,medicare,1670.43,0.0,185.6,post_payment_review
+S001219_0,C001219,2024-08-28,"[""CV002161_0"", ""CV002161_1""]",medicare,medicaid_02,166.21,0.0,41.55,initial_adjudication
+S001228_0,C001228,2025-03-24,"[""CV000572_0"", ""CV000572_1""]",employer_005,employer_000,475.13,0.0,52.79,initial_adjudication
+S001265_0,C001265,2025-02-05,"[""CV002137_0"", ""CV002137_1""]",medicare,medicaid_04,88.02,0.0,22.0,initial_adjudication
+S001290_0,C001290,2025-01-23,"[""CV001015_0"", ""CV001015_1""]",medicare,employer_001,427.22,53.4,53.4,initial_adjudication
+S001290_1,C001290,2025-03-18,"[""CV001015_0"", ""CV001015_1""]",employer_001,medicare,480.62,0.0,53.4,post_payment_review
+S001347_0,C001347,2025-05-23,"[""CV001708_0"", ""CV001708_1""]",medicaid_01,medicare,9.83,4.47,3.57,initial_adjudication
+S001347_1,C001347,2025-09-14,"[""CV001708_0"", ""CV001708_1""]",medicare,medicaid_01,14.3,0.0,3.57,post_payment_review
+S001375_0,C001375,2024-01-22,"[""CV001367_0"", ""CV001367_1""]",medicare,medicaid_03,380.03,0.0,95.01,initial_adjudication
+S001408_0,C001408,2025-04-12,"[""CV001189_0""]",medicare,,389.3,0.0,97.32,initial_adjudication
+S001453_0,C001453,2024-09-19,"[""CV002003_0"", ""CV002003_1""]",medicare,medicaid_04,411.12,0.0,102.78,initial_adjudication
+S001473_0,C001473,2025-10-16,"[""CV001059_0"", ""CV001059_1""]",medicare,employer_025,148.14,18.51,18.52,initial_adjudication
+S001473_1,C001473,2026-02-01,"[""CV001059_0"", ""CV001059_1""]",employer_025,medicare,166.65,0.0,18.52,post_payment_review
+S001497_0,C001497,2024-07-06,"[""CV000524_0"", ""CV000524_1""]",employer_000,medicare,637.91,0.0,70.88,initial_adjudication
+S001513_0,C001513,2025-10-11,"[""CV002109_0"", ""CV002109_1""]",medicare,medicaid_04,519.72,0.0,129.93,initial_adjudication
+S001521_0,C001521,2025-12-30,"[""CV001660_0"", ""CV001660_1""]",employer_020,medicare,493.21,0.0,54.8,initial_adjudication
+S001531_0,C001531,2025-06-13,"[""CV000564_0"", ""CV000564_2""]",workers_comp_00,medicare,86.04,0.0,0.0,initial_adjudication
+S001587_0,C001587,2026-01-18,"[""CV000595_0"", ""CV000595_1""]",medicare,employer_024,770.31,96.29,96.29,initial_adjudication
+S001587_1,C001587,2026-03-15,"[""CV000595_0"", ""CV000595_1""]",employer_024,medicare,866.6,0.0,96.29,post_payment_review
+S001637_0,C001637,2025-04-12,"[""CV001536_0"", ""CV001536_1""]",employer_028,employer_018,37.5,0.0,4.17,initial_adjudication
+S001644_0,C001644,2025-10-04,"[""CV002121_0"", ""CV002121_1""]",employer_021,medicare,1717.75,0.0,190.86,initial_adjudication
+S001665_0,C001665,2025-10-24,"[""CV001054_0"", ""CV001054_1""]",employer_007,employer_029,150.51,0.0,16.72,initial_adjudication
+S001665_1,C001665,2025-12-09,"[""CV001054_0"", ""CV001054_1""]",employer_029,employer_007,150.51,0.0,16.72,post_payment_review
+S001671_0,C001671,2025-08-18,"[""CV000375_0"", ""CV000375_1""]",medicare,medicaid_01,205.77,0.0,51.44,initial_adjudication
+S001682_0,C001682,2025-10-25,"[""CV001492_0"", ""CV001492_1""]",employer_029,medicare,309.29,0.0,34.37,initial_adjudication
+S001682_1,C001682,2026-01-15,"[""CV001492_0"", ""CV001492_1"", ""CV001492_2""]",auto_02,employer_029,274.93,34.36,34.37,coverage_discovered
+S001689_0,C001689,2024-02-18,"[""CV001671_0"", ""CV001671_1""]",medicare,medicaid_02,1547.54,0.0,386.88,initial_adjudication
+S001691_0,C001691,2025-02-05,"[""CV002008_0"", ""CV002008_1""]",employer_001,employer_002,151.48,0.0,16.83,initial_adjudication
+S001691_1,C001691,2025-06-02,"[""CV002008_0"", ""CV002008_1""]",employer_002,employer_001,151.48,0.0,16.83,post_payment_review
+S001719_0,C001719,2025-01-24,"[""CV001166_0"", ""CV001166_1""]",medicare,employer_004,300.01,37.5,37.5,initial_adjudication
+S001719_1,C001719,2025-04-08,"[""CV001166_0"", ""CV001166_1""]",employer_004,medicare,337.51,0.0,37.5,post_payment_review
+S001732_0,C001732,2025-08-08,"[""CV002230_0"", ""CV002230_1"", ""CV002230_2""]",employer_008,employer_024,639.12,0.0,71.01,initial_adjudication
+S001732_1,C001732,2025-08-27,"[""CV002230_0"", ""CV002230_2""]",employer_024,medicare,639.12,0.0,71.01,retroactive_termination_recorded
+S001734_0,C001734,2025-11-25,"[""CV001346_0""]",medicare,,362.15,0.0,90.54,initial_adjudication
+S001751_0,C001751,2024-04-29,"[""CV000390_0"", ""CV000390_1""]",medicaid_04,medicare,52.38,23.8,19.05,initial_adjudication
+S001751_1,C001751,2024-08-01,"[""CV000390_0"", ""CV000390_1""]",medicare,medicaid_04,76.18,0.0,19.05,post_payment_review
+S001759_0,C001759,2025-10-12,"[""CV002286_0"", ""CV002286_1""]",employer_029,medicare,37.58,0.0,4.17,initial_adjudication
+S001788_0,C001788,2024-08-29,"[""CV000685_0"", ""CV000685_1""]",medicare,employer_006,197.83,24.73,24.73,initial_adjudication
+S001788_1,C001788,2024-10-27,"[""CV000685_0"", ""CV000685_1""]",employer_006,medicare,222.56,0.0,24.73,post_payment_review
+S001828_0,C001828,2024-11-17,"[""CV001599_0"", ""CV001599_1""]",employer_003,medicare,506.57,0.0,56.29,initial_adjudication
+S001828_1,C001828,2025-01-03,"[""CV001599_0""]",medicare,,450.29,0.0,112.57,retroactive_termination_recorded
+S001896_0,C001896,2024-03-30,"[""CV000838_0"", ""CV000838_1""]",medicare,employer_009,2630.82,328.85,328.85,initial_adjudication
+S001896_1,C001896,2024-07-14,"[""CV000838_0"", ""CV000838_1""]",employer_009,medicare,2959.67,0.0,328.85,post_payment_review
+S001936_0,C001936,2025-02-18,"[""CV002045_0"", ""CV002045_1""]",employer_009,employer_016,1278.65,0.0,142.07,initial_adjudication
+S001936_1,C001936,2025-03-28,"[""CV002045_0"", ""CV002045_1""]",employer_016,employer_009,1278.65,0.0,142.07,post_payment_review
+S001950_0,C001950,2025-05-07,"[""CV002116_0"", ""CV002116_2""]",medicare,medicaid_02,40.5,0.0,10.12,initial_adjudication
+S001962_0,C001962,2024-12-16,"[""CV001191_0"", ""CV001191_2""]",medicaid_02,medicare,362.11,164.59,131.68,initial_adjudication
+S001962_1,C001962,2025-03-29,"[""CV001191_0"", ""CV001191_2""]",medicare,medicaid_02,526.7,0.0,131.68,post_payment_review
+S001968_0,C001968,2024-05-08,"[""CV001135_0"", ""CV001135_1"", ""CV001135_2""]",employer_003,medicare,281.91,0.0,31.32,initial_adjudication
+S001990_0,C001990,2025-07-07,"[""CV000202_0"", ""CV000202_1""]",medicare,medicaid_03,396.67,0.0,99.17,initial_adjudication
+S002032_0,C002032,2025-09-19,"[""CV001887_0"", ""CV001887_1""]",medicare,medicaid_04,973.63,0.0,243.41,initial_adjudication
+S002040_0,C002040,2025-08-27,"[""CV000026_0"", ""CV000026_1""]",employer_026,medicare,219.81,0.0,24.42,initial_adjudication
+S002040_1,C002040,2025-09-11,"[""CV000026_0""]",medicare,,195.38,0.0,48.85,retroactive_termination_recorded
+S002054_0,C002054,2024-04-11,"[""CV001963_0"", ""CV001963_1"", ""CV001963_2""]",employer_027,medicare,2365.51,0.0,262.83,initial_adjudication
+S002080_0,C002080,2025-08-02,"[""CV001116_0"", ""CV001116_1""]",employer_028,medicare,5323.29,0.0,591.48,initial_adjudication
+S002104_0,C002104,2024-12-05,"[""CV001821_0""]",medicare,,719.6,0.0,179.9,initial_adjudication
+S002105_0,C002105,2024-03-09,"[""CV001191_0"", ""CV001191_1"", ""CV001191_2""]",medicare,employer_029,11.46,1.43,1.43,initial_adjudication
+S002105_1,C002105,2024-05-20,"[""CV001191_0"", ""CV001191_1"", ""CV001191_2""]",employer_029,medicare,12.89,0.0,1.43,post_payment_review
+S002126_0,C002126,2024-08-08,"[""CV000720_0"", ""CV000720_1"", ""CV000720_2""]",employer_026,medicare,516.96,0.0,57.44,initial_adjudication
+S002135_0,C002135,2025-11-09,"[""CV000674_0"", ""CV000674_1""]",medicare,employer_021,1543.12,192.89,192.89,initial_adjudication
+S002135_1,C002135,2026-02-16,"[""CV000674_0"", ""CV000674_1""]",employer_021,medicare,1736.01,0.0,192.89,post_payment_review
+S002140_0,C002140,2025-03-12,"[""CV002040_0""]",medicare,,581.59,0.0,145.4,initial_adjudication
+S002174_0,C002174,2024-12-29,"[""CV001020_0"", ""CV001020_1""]",employer_010,employer_019,1480.57,0.0,164.51,initial_adjudication
+S002176_0,C002176,2025-02-01,"[""CV002025_0"", ""CV002025_1""]",employer_004,employer_027,55.98,0.0,6.22,initial_adjudication
+S002193_0,C002193,2025-11-24,"[""CV001060_0"", ""CV001060_1""]",medicare,employer_029,111.52,13.94,13.94,initial_adjudication
+S002193_1,C002193,2026-01-21,"[""CV001060_0"", ""CV001060_1""]",employer_029,medicare,125.46,0.0,13.94,post_payment_review
+S002207_0,C002207,2025-03-15,"[""CV000186_0"", ""CV000186_1""]",medicare,medicaid_04,174.79,0.0,43.7,initial_adjudication
+S002221_0,C002221,2025-07-26,"[""CV002272_0""]",medicare,,269.72,0.0,67.43,initial_adjudication
+S002228_0,C002228,2025-05-22,"[""CV000319_0"", ""CV000319_1"", ""CV000319_2""]",employer_022,medicare,875.21,0.0,97.25,initial_adjudication
+S002245_0,C002245,2024-11-03,"[""CV002385_0"", ""CV002385_1""]",medicare,medicaid_04,127.3,0.0,31.82,initial_adjudication
+S002267_0,C002267,2024-08-17,"[""CV001909_0"", ""CV001909_1""]",employer_028,medicare,65.63,0.0,7.29,initial_adjudication
+S002275_0,C002275,2025-09-13,"[""CV001823_0"", ""CV001823_1"", ""CV001823_2""]",employer_013,employer_028,83.92,0.0,9.32,initial_adjudication
+S002330_0,C002330,2024-07-04,"[""CV001232_0"", ""CV001232_1""]",medicare,medicaid_03,1133.42,0.0,283.35,initial_adjudication
+S002333_0,C002333,2025-05-08,"[""CV001149_0"", ""CV001149_1""]",medicare,employer_003,765.47,95.69,95.68,initial_adjudication
+S002333_1,C002333,2025-09-02,"[""CV001149_0"", ""CV001149_1""]",employer_003,medicare,861.16,0.0,95.68,post_payment_review
+S002379_0,C002379,2024-06-28,"[""CV000808_0"", ""CV000808_1""]",employer_018,employer_023,280.35,0.0,31.15,initial_adjudication
+S002379_1,C002379,2024-09-30,"[""CV000808_0"", ""CV000808_1""]",employer_023,employer_018,280.35,0.0,31.15,post_payment_review
+S002380_0,C002380,2024-06-01,"[""CV001577_0"", ""CV001577_1"", ""CV001577_2""]",employer_009,medicare,74.4,0.0,8.27,initial_adjudication
+S002401_0,C002401,2024-06-16,"[""CV000761_0"", ""CV000761_1""]",employer_016,medicare,779.69,0.0,86.63,initial_adjudication
+S002408_0,C002408,2025-05-15,"[""CV000606_0"", ""CV000606_1""]",employer_026,medicare,973.74,0.0,108.19,initial_adjudication
+S002409_0,C002409,2025-04-22,"[""CV000900_0"", ""CV000900_1""]",employer_016,employer_027,5960.58,0.0,662.29,initial_adjudication
+S002424_0,C002424,2025-08-06,"[""CV001817_0"", ""CV001817_1""]",employer_016,medicare,392.83,0.0,43.65,initial_adjudication
+S002424_1,C002424,2025-08-07,"[""CV001817_0""]",medicare,,349.18,0.0,87.3,retroactive_termination_recorded
+S002458_0,C002458,2024-02-10,"[""CV000279_0"", ""CV000279_1"", ""CV000279_2""]",medicare,employer_021,65.87,8.24,8.23,initial_adjudication
+S002458_1,C002458,2024-03-26,"[""CV000279_0"", ""CV000279_1"", ""CV000279_2""]",employer_021,medicare,74.11,0.0,8.23,post_payment_review
+S002493_0,C002493,2025-04-26,"[""CV001626_0"", ""CV001626_1""]",employer_021,medicare,602.62,0.0,66.96,initial_adjudication
+S002493_1,C002493,2025-04-29,"[""CV001626_0""]",medicare,,535.66,0.0,133.92,retroactive_termination_recorded
+S002495_0,C002495,2025-10-20,"[""CV000081_0"", ""CV000081_1""]",employer_015,employer_000,160.55,0.0,17.84,initial_adjudication
+S002495_1,C002495,2026-01-01,"[""CV000081_0"", ""CV000081_1""]",employer_000,employer_015,160.55,0.0,17.84,post_payment_review
+S002537_0,C002537,2024-01-29,"[""CV001918_0"", ""CV001918_1""]",employer_028,medicare,674.76,0.0,74.97,initial_adjudication
+S002549_0,C002549,2024-03-30,"[""CV002380_0"", ""CV002380_1""]",medicaid_03,medicare,17.99,8.18,6.54,initial_adjudication
+S002549_1,C002549,2024-06-21,"[""CV002380_0"", ""CV002380_1""]",medicare,medicaid_03,26.17,0.0,6.54,post_payment_review
+S002568_0,C002568,2024-05-10,"[""CV000669_0"", ""CV000669_1"", ""CV000669_2""]",medicaid_03,employer_009,753.73,479.64,137.04,initial_adjudication
+S002568_1,C002568,2024-08-27,"[""CV000669_0"", ""CV000669_1"", ""CV000669_2""]",employer_009,medicare,1233.37,0.0,137.04,post_payment_review
+S002611_0,C002611,2025-04-25,"[""CV000576_0"", ""CV000576_1""]",medicare,medicaid_04,31.76,0.0,7.94,initial_adjudication
+S002636_0,C002636,2024-06-11,"[""CV001151_0"", ""CV001151_1""]",medicare,employer_018,33.6,4.2,4.2,initial_adjudication
+S002636_1,C002636,2024-08-17,"[""CV001151_0"", ""CV001151_1""]",employer_018,medicare,37.8,0.0,4.2,post_payment_review
+S002640_0,C002640,2024-03-22,"[""CV001782_0"", ""CV001782_1""]",medicare,medicaid_02,268.06,0.0,67.01,initial_adjudication
+S002650_0,C002650,2025-12-30,"[""CV001555_0"", ""CV001555_1""]",medicare,employer_006,29.03,3.63,3.63,initial_adjudication
+S002650_1,C002650,2026-02-06,"[""CV001555_0"", ""CV001555_1""]",employer_006,medicare,32.66,0.0,3.63,post_payment_review
+S002652_0,C002652,2025-01-26,"[""CV002080_0""]",medicare,,144.53,0.0,36.13,initial_adjudication
+S002654_0,C002654,2025-06-11,"[""CV001821_0""]",medicare,,1054.06,0.0,263.52,initial_adjudication
+S002659_0,C002659,2025-11-18,"[""CV002240_0"", ""CV002240_1""]",medicare,medicaid_03,641.86,0.0,160.46,initial_adjudication
+S002666_0,C002666,2024-06-17,"[""CV001611_0"", ""CV001611_1"", ""CV001611_2""]",employer_022,employer_018,72.05,0.0,8.01,initial_adjudication
+S002666_1,C002666,2024-07-23,"[""CV001611_0"", ""CV001611_2""]",employer_018,medicare,72.05,0.0,8.01,retroactive_termination_recorded
+S002676_0,C002676,2024-06-22,"[""CV002206_0"", ""CV002206_1""]",medicare,medicaid_04,736.54,0.0,184.14,initial_adjudication
+S002687_0,C002687,2026-01-14,"[""CV000096_0"", ""CV000096_1""]",employer_002,medicare,84.7,0.0,9.41,initial_adjudication
+S002698_0,C002698,2024-07-26,"[""CV000336_0"", ""CV000336_1"", ""CV000336_2""]",employer_014,medicare,190.6,0.0,21.18,initial_adjudication
+S002742_0,C002742,2024-08-19,"[""CV000059_0"", ""CV000059_1""]",employer_005,employer_017,338.62,0.0,37.62,initial_adjudication
+S002763_0,C002763,2025-09-07,"[""CV000432_0"", ""CV000432_2""]",medicare,medicaid_01,905.86,0.0,226.46,initial_adjudication
+S002767_0,C002767,2025-08-14,"[""CV001371_0"", ""CV001371_1"", ""CV001371_2""]",medicare,employer_028,3658.54,457.32,457.32,initial_adjudication
+S002767_1,C002767,2025-11-17,"[""CV001371_0"", ""CV001371_1"", ""CV001371_2""]",employer_028,medicare,4115.86,0.0,457.32,post_payment_review
+S002804_0,C002804,2024-10-02,"[""CV001450_0"", ""CV001450_1""]",medicare,medicaid_04,94.16,0.0,23.54,initial_adjudication
+S002819_0,C002819,2024-04-27,"[""CV000308_0"", ""CV000308_1"", ""CV000308_2"", ""CV000308_3""]",employer_021,employer_026,44.76,0.0,4.97,initial_adjudication
+S002819_1,C002819,2024-06-23,"[""CV000308_0"", ""CV000308_1"", ""CV000308_2"", ""CV000308_3""]",employer_026,employer_021,44.76,0.0,4.97,post_payment_review
+S002837_0,C002837,2025-05-25,"[""CV000317_0"", ""CV000317_1""]",medicaid_02,medicare,4.98,2.26,1.81,initial_adjudication
+S002837_1,C002837,2025-08-05,"[""CV000317_0"", ""CV000317_1""]",medicare,medicaid_02,7.24,0.0,1.81,post_payment_review
+S002844_0,C002844,2025-02-07,"[""CV000235_0"", ""CV000235_1"", ""CV000235_2""]",workers_comp_00,employer_007,467.33,0.0,0.0,initial_adjudication
+S002864_0,C002864,2024-04-09,"[""CV000419_0"", ""CV000419_2""]",medicare,medicaid_01,936.16,0.0,234.04,initial_adjudication
+S002864_1,C002864,2025-11-28,"[""CV000419_0"", ""CV000419_1"", ""CV000419_2""]",employer_024,medicare,1053.18,0.0,117.02,coverage_discovered
+S002878_0,C002878,2024-07-28,"[""CV000047_0""]",medicare,,309.66,0.0,77.42,initial_adjudication
+S002878_1,C002878,2025-06-27,"[""CV000047_0"", ""CV000047_1""]",employer_016,medicare,348.37,0.0,38.71,coverage_discovered
+S002906_0,C002906,2024-09-11,"[""CV000649_0"", ""CV000649_1""]",employer_009,medicare,115.69,0.0,12.85,initial_adjudication
+S002906_1,C002906,2024-11-04,"[""CV000649_0""]",medicare,,102.83,0.0,25.71,retroactive_termination_recorded
+S002978_0,C002978,2024-07-31,"[""CV001821_0""]",medicare,,65.31,0.0,16.33,initial_adjudication
+S002982_0,C002982,2025-07-20,"[""CV000065_0"", ""CV000065_1"", ""CV000065_2""]",medicaid_03,workers_comp_02,19.59,16.02,0.0,initial_adjudication
+S002982_1,C002982,2025-10-17,"[""CV000065_0"", ""CV000065_1"", ""CV000065_2""]",workers_comp_02,medicare,35.61,0.0,0.0,post_payment_review
+S002994_0,C002994,2024-06-09,"[""CV001159_0""]",medicare,,753.73,0.0,188.43,initial_adjudication
+S003103_0,C003103,2024-04-10,"[""CV002331_0"", ""CV002331_2""]",employer_015,medicare,2183.85,0.0,242.65,initial_adjudication
+S003103_1,C003103,2025-02-28,"[""CV002331_0"", ""CV002331_1"", ""CV002331_2""]",employer_002,employer_015,2183.85,0.0,242.65,coverage_discovered
+S003142_0,C003142,2025-06-20,"[""CV001162_0"", ""CV001162_1""]",employer_023,medicare,85.86,0.0,9.54,initial_adjudication
+S003145_0,C003145,2024-07-24,"[""CV000483_0"", ""CV000483_1"", ""CV000483_2""]",workers_comp_00,employer_025,447.24,0.0,0.0,initial_adjudication
+S003161_0,C003161,2024-03-19,"[""CV000959_0"", ""CV000959_1""]",medicare,employer_009,1619.01,202.37,202.38,initial_adjudication
+S003161_1,C003161,2024-05-18,"[""CV000959_0"", ""CV000959_1""]",employer_009,medicare,1821.38,0.0,202.38,post_payment_review
+S003192_0,C003192,2024-04-10,"[""CV001904_0"", ""CV001904_1"", ""CV001904_2""]",employer_001,employer_009,51.31,0.0,5.7,initial_adjudication
+S003223_0,C003223,2025-07-17,"[""CV000812_0"", ""CV000812_1""]",medicare,medicaid_04,305.48,0.0,76.37,initial_adjudication
+S003224_0,C003224,2025-08-01,"[""CV001317_0"", ""CV001317_1""]",medicaid_04,medicare,281.77,128.08,102.46,initial_adjudication
+S003224_1,C003224,2025-10-28,"[""CV001317_0"", ""CV001317_1""]",medicare,medicaid_04,409.85,0.0,102.46,post_payment_review
+S003268_0,C003268,2024-06-14,"[""CV000564_0"", ""CV000564_1""]",employer_019,medicare,56.96,0.0,6.33,initial_adjudication
+S003276_0,C003276,2025-06-18,"[""CV001419_0"", ""CV001419_1""]",medicare,medicaid_00,46.49,0.0,11.62,initial_adjudication
+S003282_0,C003282,2025-07-13,"[""CV001089_0"", ""CV001089_1""]",medicare,medicaid_01,361.22,0.0,90.31,initial_adjudication
+S003284_0,C003284,2025-12-27,"[""CV000216_0"", ""CV000216_1""]",medicaid_04,medicare,174.67,79.39,63.52,initial_adjudication
+S003284_1,C003284,2026-04-22,"[""CV000216_0"", ""CV000216_1""]",medicare,medicaid_04,254.06,0.0,63.52,post_payment_review
+S003308_0,C003308,2025-12-15,"[""CV000522_0"", ""CV000522_1""]",medicaid_02,medicare,791.53,359.78,287.83,initial_adjudication
+S003308_1,C003308,2026-04-08,"[""CV000522_0"", ""CV000522_1""]",medicare,medicaid_02,1151.31,0.0,287.83,post_payment_review
+S003315_0,C003315,2025-02-05,"[""CV001628_0"", ""CV001628_1""]",employer_007,employer_017,1635.08,0.0,181.68,initial_adjudication
+S003327_0,C003327,2024-12-26,"[""CV000849_0"", ""CV000849_1""]",medicare,medicaid_00,411.14,0.0,102.79,initial_adjudication
+S003334_0,C003334,2025-03-30,"[""CV002316_0"", ""CV002316_1""]",employer_000,medicare,884.25,0.0,98.25,initial_adjudication
+S003351_0,C003351,2024-03-13,"[""CV000732_0""]",medicare,,813.08,0.0,203.27,initial_adjudication
+S003354_0,C003354,2024-11-18,"[""CV002046_0"", ""CV002046_1"", ""CV002046_2""]",employer_009,medicare,3422.35,0.0,380.26,initial_adjudication
+S003354_1,C003354,2025-02-25,"[""CV002046_0"", ""CV002046_2""]",medicare,medicaid_01,3042.09,0.0,760.52,retroactive_termination_recorded
+S003384_0,C003384,2024-09-19,"[""CV000324_0"", ""CV000324_1""]",employer_008,medicare,359.78,0.0,39.97,initial_adjudication
+S003395_0,C003395,2024-05-18,"[""CV002320_0"", ""CV002320_1""]",medicare,medicaid_02,307.26,0.0,76.82,initial_adjudication
+S003405_0,C003405,2025-06-17,"[""CV002121_0"", ""CV002121_1""]",employer_021,medicare,161.19,0.0,17.91,initial_adjudication
+S003421_0,C003421,2024-02-19,"[""CV002144_0"", ""CV002144_1""]",employer_012,medicare,764.29,0.0,84.92,initial_adjudication
+S003437_0,C003437,2025-01-01,"[""CV000458_0"", ""CV000458_1""]",employer_025,medicare,59.22,0.0,6.58,initial_adjudication
+S003437_1,C003437,2025-01-04,"[""CV000458_0""]",medicare,,52.64,0.0,13.16,retroactive_termination_recorded
+S003438_0,C003438,2024-09-29,"[""CV000371_0"", ""CV000371_1""]",medicare,medicaid_01,283.42,0.0,70.86,initial_adjudication
+S003444_0,C003444,2026-01-21,"[""CV002140_0"", ""CV002140_1"", ""CV002140_2""]",employer_024,medicare,38.19,0.0,4.24,initial_adjudication
+S003447_0,C003447,2025-09-08,"[""CV001148_0"", ""CV001148_1""]",medicaid_00,medicare,100.6,45.72,36.58,initial_adjudication
+S003447_1,C003447,2025-11-21,"[""CV001148_0"", ""CV001148_1""]",medicare,medicaid_00,146.32,0.0,36.58,post_payment_review
+S003466_0,C003466,2025-08-24,"[""CV000462_0"", ""CV000462_1""]",employer_023,medicare,1524.15,0.0,169.35,initial_adjudication
+S003466_1,C003466,2025-11-22,"[""CV000462_0""]",medicare,,1354.8,0.0,338.7,retroactive_termination_recorded
+S003474_0,C003474,2025-02-02,"[""CV001586_0"", ""CV001586_2""]",medicare,medicaid_01,471.58,0.0,117.89,initial_adjudication
+S003474_1,C003474,2025-02-18,"[""CV001586_0"", ""CV001586_2"", ""CV001586_3""]",auto_03,medicare,471.58,0.0,117.89,coverage_discovered
+S003510_0,C003510,2025-02-27,"[""CV001434_0"", ""CV001434_1""]",employer_002,medicare,133.97,0.0,14.88,initial_adjudication
+S003513_0,C003513,2025-04-22,"[""CV001248_0"", ""CV001248_1""]",medicare,employer_020,601.66,75.2,75.21,initial_adjudication
+S003513_1,C003513,2025-05-24,"[""CV001248_0"", ""CV001248_1""]",employer_020,medicare,676.86,0.0,75.21,post_payment_review
+S003526_0,C003526,2024-03-09,"[""CV001301_0"", ""CV001301_1"", ""CV001301_2"", ""CV001301_3""]",employer_009,employer_018,347.16,0.0,38.57,initial_adjudication
+S003547_0,C003547,2024-10-18,"[""CV001831_0""]",medicare,,2052.2,0.0,513.05,initial_adjudication
+S003574_0,C003574,2025-05-25,"[""CV000455_0"", ""CV000455_1""]",medicare,employer_021,2520.38,315.04,315.05,initial_adjudication
+S003574_1,C003574,2025-09-12,"[""CV000455_0"", ""CV000455_1""]",employer_021,medicare,2835.42,0.0,315.05,post_payment_review
+S003575_0,C003575,2024-04-21,"[""CV000567_0"", ""CV000567_1""]",medicaid_03,medicare,131.69,59.86,47.89,initial_adjudication
+S003575_1,C003575,2024-07-14,"[""CV000567_0"", ""CV000567_1""]",medicare,medicaid_03,191.55,0.0,47.89,post_payment_review
+S003596_0,C003596,2024-04-12,"[""CV001629_0"", ""CV001629_1"", ""CV001629_2""]",employer_014,medicare,280.6,0.0,31.18,initial_adjudication
+S003646_0,C003646,2025-06-19,"[""CV000186_0"", ""CV000186_1""]",medicare,medicaid_04,83.01,0.0,20.75,initial_adjudication
+S003666_0,C003666,2025-12-02,"[""CV000457_0"", ""CV000457_1""]",employer_026,employer_014,1122.62,0.0,124.73,initial_adjudication
+S003670_0,C003670,2025-10-05,"[""CV001159_0""]",medicare,,10.23,0.0,2.56,initial_adjudication
+S003715_0,C003715,2026-01-08,"[""CV001370_0""]",medicare,,155.12,0.0,38.78,initial_adjudication
+S003729_0,C003729,2024-11-05,"[""CV001893_0"", ""CV001893_1""]",employer_003,medicare,256.42,0.0,28.49,initial_adjudication
+S003760_0,C003760,2025-03-19,"[""CV002261_0"", ""CV002261_1"", ""CV002261_2"", ""CV002261_3""]",employer_006,employer_004,142.28,0.0,15.81,initial_adjudication
+S003760_1,C003760,2025-04-22,"[""CV002261_0"", ""CV002261_2"", ""CV002261_3""]",employer_004,medicare,142.28,0.0,15.81,retroactive_termination_recorded
+S003776_0,C003776,2024-08-13,"[""CV001559_0"", ""CV001559_1""]",employer_009,medicare,1155.34,0.0,128.37,initial_adjudication
+S003795_0,C003795,2026-01-27,"[""CV000116_0"", ""CV000116_1"", ""CV000116_2""]",workers_comp_00,medicare,558.09,0.0,0.0,initial_adjudication
+S003808_0,C003808,2025-01-19,"[""CV000433_0"", ""CV000433_1""]",medicaid_04,medicare,336.82,153.1,122.48,initial_adjudication
+S003808_1,C003808,2025-05-15,"[""CV000433_0"", ""CV000433_1""]",medicare,medicaid_04,489.92,0.0,122.48,post_payment_review
+S003818_0,C003818,2025-06-11,"[""CV000874_0"", ""CV000874_1""]",medicaid_02,medicare,648.87,294.95,235.95,initial_adjudication
+S003818_1,C003818,2025-08-10,"[""CV000874_0"", ""CV000874_1""]",medicare,medicaid_02,943.82,0.0,235.95,post_payment_review
+S003841_0,C003841,2025-11-08,"[""CV001303_0"", ""CV001303_1""]",employer_026,medicare,174.74,0.0,19.42,initial_adjudication
+S003868_0,C003868,2024-05-03,"[""CV001145_0"", ""CV001145_1""]",medicaid_00,medicare,35.26,16.03,12.82,initial_adjudication
+S003868_1,C003868,2024-06-20,"[""CV001145_0"", ""CV001145_1""]",medicare,medicaid_00,51.29,0.0,12.82,post_payment_review
+S003895_0,C003895,2025-09-11,"[""CV001007_0"", ""CV001007_1""]",employer_024,medicare,324.33,0.0,36.04,initial_adjudication
+S003895_1,C003895,2025-10-05,"[""CV001007_0""]",medicare,,288.3,0.0,72.07,retroactive_termination_recorded
+S003918_0,C003918,2024-02-27,"[""CV002164_0""]",medicare,,3111.47,0.0,777.87,initial_adjudication
+S003976_0,C003976,2025-04-11,"[""CV000844_0"", ""CV000844_1""]",employer_018,employer_010,553.91,0.0,61.54,initial_adjudication
+S004004_0,C004004,2025-03-04,"[""CV002213_0"", ""CV002213_1""]",medicare,medicaid_04,124.1,0.0,31.03,initial_adjudication
+S004055_0,C004055,2024-05-04,"[""CV000373_0"", ""CV000373_1""]",medicaid_04,medicare,364.2,165.55,132.44,initial_adjudication
+S004055_1,C004055,2024-07-29,"[""CV000373_0"", ""CV000373_1""]",medicare,medicaid_04,529.75,0.0,132.44,post_payment_review
+S004090_0,C004090,2024-10-16,"[""CV000533_0"", ""CV000533_1""]",medicare,medicaid_00,244.15,0.0,61.04,initial_adjudication
+S004152_0,C004152,2024-03-29,"[""CV000041_0"", ""CV000041_1""]",employer_019,medicare,346.07,0.0,38.45,initial_adjudication
+S004201_0,C004201,2025-03-03,"[""CV001926_0"", ""CV001926_1""]",employer_026,employer_017,71.06,0.0,7.9,initial_adjudication
+S004204_0,C004204,2025-10-09,"[""CV000092_0"", ""CV000092_1"", ""CV000092_2""]",employer_003,medicare,270.8,0.0,30.09,initial_adjudication
+S004224_0,C004224,2024-12-11,"[""CV002340_0""]",medicare,,287.02,0.0,71.75,initial_adjudication
+S004226_0,C004226,2025-05-16,"[""CV001627_0"", ""CV001627_1""]",employer_016,medicare,973.9,0.0,108.21,initial_adjudication
+S004244_0,C004244,2024-07-29,"[""CV002261_0"", ""CV002261_1"", ""CV002261_2"", ""CV002261_3""]",medicare,employer_006,22.02,2.75,2.75,initial_adjudication
+S004244_1,C004244,2024-11-13,"[""CV002261_0"", ""CV002261_1"", ""CV002261_2"", ""CV002261_3""]",employer_006,employer_004,24.77,0.0,2.75,post_payment_review
+S004276_0,C004276,2025-10-04,"[""CV002280_0"", ""CV002280_1""]",medicare,medicaid_02,1383.77,0.0,345.94,initial_adjudication
+S004292_0,C004292,2025-12-05,"[""CV001829_0"", ""CV001829_1""]",medicare,medicaid_04,1153.02,0.0,288.25,initial_adjudication
+S004332_0,C004332,2024-07-16,"[""CV002289_0"", ""CV002289_1""]",employer_020,employer_013,323.81,0.0,35.98,initial_adjudication
+S004332_1,C004332,2024-09-05,"[""CV002289_0"", ""CV002289_1""]",employer_013,employer_020,323.81,0.0,35.98,post_payment_review
+S004337_0,C004337,2024-09-22,"[""CV002176_0"", ""CV002176_1""]",medicare,medicaid_00,169.16,0.0,42.29,initial_adjudication
+S004342_0,C004342,2025-08-19,"[""CV000107_0""]",medicare,,942.7,0.0,235.67,initial_adjudication
+S004376_0,C004376,2024-08-31,"[""CV001603_0""]",medicare,,194.66,0.0,48.66,initial_adjudication
+S004376_1,C004376,2024-09-15,"[""CV001603_0"", ""CV001603_1""]",employer_006,medicare,218.99,0.0,24.33,coverage_discovered
+S004399_0,C004399,2024-07-16,"[""CV000664_0"", ""CV000664_1"", ""CV000664_2"", ""CV000664_3""]",employer_023,employer_003,31.09,0.0,3.45,initial_adjudication
+S004399_1,C004399,2024-08-12,"[""CV000664_0"", ""CV000664_2"", ""CV000664_3""]",employer_003,medicare,31.09,0.0,3.45,retroactive_termination_recorded
+S004438_0,C004438,2024-10-10,"[""CV001764_0"", ""CV001764_1""]",medicare,medicaid_00,77.88,0.0,19.47,initial_adjudication
+S004445_0,C004445,2025-06-02,"[""CV002280_0"", ""CV002280_1""]",medicaid_02,medicare,179.27,81.48,65.19,initial_adjudication
+S004445_1,C004445,2025-08-23,"[""CV002280_0"", ""CV002280_1""]",medicare,medicaid_02,260.75,0.0,65.19,post_payment_review
+S004463_0,C004463,2024-12-22,"[""CV001518_0"", ""CV001518_2""]",medicare,medicaid_00,150.02,0.0,37.51,initial_adjudication
+S004465_0,C004465,2024-05-28,"[""CV001443_0"", ""CV001443_1""]",employer_021,medicare,69.29,0.0,7.7,initial_adjudication
+S004478_0,C004478,2025-03-21,"[""CV002048_0"", ""CV002048_1""]",medicaid_04,medicare,3174.58,1442.99,1154.39,initial_adjudication
+S004478_1,C004478,2025-05-13,"[""CV002048_0"", ""CV002048_1""]",medicare,medicaid_04,4617.57,0.0,1154.39,post_payment_review
+S004483_0,C004483,2024-07-26,"[""CV002266_0"", ""CV002266_1""]",medicare,medicaid_01,478.77,0.0,119.69,initial_adjudication
+S004489_0,C004489,2024-06-30,"[""CV001940_0"", ""CV001940_1""]",employer_021,medicare,14.62,0.0,1.63,initial_adjudication
+S004514_0,C004514,2025-03-22,"[""CV000021_0"", ""CV000021_1""]",medicare,medicaid_02,696.98,0.0,174.25,initial_adjudication
+S004542_0,C004542,2025-05-25,"[""CV002301_0"", ""CV002301_2""]",medicaid_02,medicare,150.9,68.6,54.87,initial_adjudication
+S004542_1,C004542,2025-07-09,"[""CV002301_0"", ""CV002301_2""]",medicare,medicaid_02,219.5,0.0,54.87,post_payment_review
+S004566_0,C004566,2024-05-15,"[""CV002154_0"", ""CV002154_1""]",medicare,medicaid_01,79.26,0.0,19.81,initial_adjudication
+S004594_0,C004594,2024-06-24,"[""CV001774_0"", ""CV001774_1""]",employer_005,medicare,914.39,0.0,101.6,initial_adjudication
+S004597_0,C004597,2024-04-23,"[""CV001518_0"", ""CV001518_1"", ""CV001518_2""]",employer_011,medicare,695.7,0.0,77.3,initial_adjudication
+S004627_0,C004627,2025-06-14,"[""CV000045_0"", ""CV000045_1""]",employer_011,medicare,237.04,0.0,26.34,initial_adjudication
+S004647_0,C004647,2024-04-08,"[""CV000030_0"", ""CV000030_1""]",medicare,medicaid_04,496.74,0.0,124.19,initial_adjudication
+S004664_0,C004664,2025-09-04,"[""CV000038_0"", ""CV000038_1""]",medicare,medicaid_03,56.7,0.0,14.18,initial_adjudication
+S004672_0,C004672,2025-04-04,"[""CV000874_0"", ""CV000874_1""]",medicare,medicaid_02,440.91,0.0,110.23,initial_adjudication
+S004681_0,C004681,2025-06-30,"[""CV001113_0"", ""CV001113_1""]",medicare,medicaid_03,1375.4,0.0,343.85,initial_adjudication
+S004744_0,C004744,2024-10-21,"[""CV001849_0"", ""CV001849_1""]",medicare,employer_026,52.41,6.55,6.55,initial_adjudication
+S004744_1,C004744,2025-02-11,"[""CV001849_0"", ""CV001849_1""]",employer_026,medicare,58.96,0.0,6.55,post_payment_review
+S004750_0,C004750,2024-04-01,"[""CV000036_0""]",medicare,,1059.34,0.0,264.83,initial_adjudication
+S004750_1,C004750,2024-04-19,"[""CV000036_0"", ""CV000036_1""]",employer_003,medicare,1191.75,0.0,132.42,coverage_discovered
+S004792_0,C004792,2025-03-06,"[""CV001793_0"", ""CV001793_1""]",employer_005,employer_000,25.44,0.0,2.83,initial_adjudication
+S004814_0,C004814,2024-07-31,"[""CV001808_0"", ""CV001808_1""]",medicare,medicaid_00,227.66,0.0,56.92,initial_adjudication
+S004823_0,C004823,2024-06-09,"[""CV002355_0"", ""CV002355_1""]",medicare,employer_014,367.57,45.94,45.95,initial_adjudication
+S004823_1,C004823,2024-07-09,"[""CV002355_0"", ""CV002355_1""]",employer_014,medicare,413.51,0.0,45.95,post_payment_review
+S004824_0,C004824,2025-01-09,"[""CV000281_0"", ""CV000281_1""]",medicaid_04,medicare,84.58,38.45,30.76,initial_adjudication
+S004824_1,C004824,2025-03-16,"[""CV000281_0"", ""CV000281_1""]",medicare,medicaid_04,123.03,0.0,30.76,post_payment_review
+S004849_0,C004849,2025-06-16,"[""CV000496_0"", ""CV000496_1""]",medicare,medicaid_03,390.12,0.0,97.53,initial_adjudication
+S004871_0,C004871,2025-03-24,"[""CV001741_0"", ""CV001741_1""]",employer_028,medicare,917.54,0.0,101.95,initial_adjudication
+S004894_0,C004894,2024-12-03,"[""CV001268_0"", ""CV001268_1"", ""CV001268_2""]",employer_025,medicare,388.72,0.0,43.19,initial_adjudication
+S004897_0,C004897,2025-05-03,"[""CV000655_0""]",medicare,,6376.05,0.0,1594.01,initial_adjudication
+S004927_0,C004927,2024-07-03,"[""CV000805_0""]",medicare,,1980.31,0.0,495.08,initial_adjudication
+S004928_0,C004928,2025-11-07,"[""CV002300_0"", ""CV002300_1""]",employer_018,employer_009,74.13,0.0,8.24,initial_adjudication
+S004982_0,C004982,2024-06-30,"[""CV001097_0"", ""CV001097_1""]",medicare,employer_000,81.06,10.14,10.13,initial_adjudication
+S004982_1,C004982,2024-10-22,"[""CV001097_0"", ""CV001097_1""]",employer_000,medicare,91.2,0.0,10.13,post_payment_review
+S004991_0,C004991,2024-08-10,"[""CV000804_0"", ""CV000804_1""]",employer_015,employer_004,348.69,0.0,38.74,initial_adjudication
+S005003_0,C005003,2024-10-25,"[""CV000777_0"", ""CV000777_1"", ""CV000777_2""]",employer_007,medicare,137.78,0.0,15.31,initial_adjudication
+S005093_0,C005093,2025-10-25,"[""CV000230_0"", ""CV000230_1""]",medicare,employer_006,297.1,37.13,37.14,initial_adjudication
+S005093_1,C005093,2025-12-07,"[""CV000230_0"", ""CV000230_1""]",employer_006,medicare,334.23,0.0,37.14,post_payment_review
+S005095_0,C005095,2025-04-24,"[""CV002185_0"", ""CV002185_1"", ""CV002185_2""]",employer_022,medicare,4247.27,0.0,471.92,initial_adjudication
+S005095_1,C005095,2025-06-04,"[""CV002185_0"", ""CV002185_2""]",medicare,medicaid_01,3775.35,0.0,943.84,retroactive_termination_recorded
+S005122_0,C005122,2025-03-12,"[""CV001522_0"", ""CV001522_1""]",employer_010,medicare,178.02,0.0,19.78,initial_adjudication
+S005155_0,C005155,2024-12-29,"[""CV000780_0""]",medicare,,2500.28,0.0,625.07,initial_adjudication
+S005155_1,C005155,2025-06-19,"[""CV000780_0"", ""CV000780_1""]",employer_015,medicare,2812.82,0.0,312.53,coverage_discovered
+S005184_0,C005184,2024-08-24,"[""CV002209_0"", ""CV002209_1""]",medicare,employer_001,52.01,6.5,6.5,initial_adjudication
+S005184_1,C005184,2024-10-07,"[""CV002209_0"", ""CV002209_1""]",employer_001,medicare,58.51,0.0,6.5,post_payment_review
+S005197_0,C005197,2024-09-12,"[""CV001210_0"", ""CV001210_1"", ""CV001210_2""]",employer_022,medicare,68.3,0.0,7.59,initial_adjudication
+S005203_0,C005203,2025-10-23,"[""CV001052_0"", ""CV001052_1""]",medicare,medicaid_03,7065.88,0.0,1766.47,initial_adjudication
+S005239_0,C005239,2026-01-12,"[""CV000447_0"", ""CV000447_1""]",employer_022,medicare,1283.31,0.0,142.59,initial_adjudication
+S005257_0,C005257,2024-11-11,"[""CV001899_0"", ""CV001899_1""]",medicare,medicaid_02,4940.12,0.0,1235.03,initial_adjudication
+S005296_0,C005296,2025-01-23,"[""CV001498_0"", ""CV001498_1""]",employer_013,medicare,182.73,0.0,20.3,initial_adjudication
+S005315_0,C005315,2024-07-24,"[""CV001953_0"", ""CV001953_1""]",employer_001,medicare,32.47,0.0,3.61,initial_adjudication
+S005315_1,C005315,2024-08-28,"[""CV001953_0""]",medicare,,28.86,0.0,7.22,retroactive_termination_recorded
+S005361_0,C005361,2025-01-23,"[""CV002272_0""]",medicare,,441.57,0.0,110.39,initial_adjudication
+S005388_0,C005388,2025-09-07,"[""CV001700_0""]",medicare,,292.55,0.0,73.14,initial_adjudication
+S005420_0,C005420,2024-04-30,"[""CV001431_0"", ""CV001431_1"", ""CV001431_2""]",employer_015,medicare,12290.75,0.0,1365.64,initial_adjudication
+S005432_0,C005432,2024-12-25,"[""CV001649_0"", ""CV001649_1""]",employer_023,medicare,362.02,0.0,40.22,initial_adjudication
+S005432_1,C005432,2025-01-23,"[""CV001649_0""]",medicare,,321.79,0.0,80.45,retroactive_termination_recorded
+S005446_0,C005446,2024-10-05,"[""CV002367_0"", ""CV002367_2"", ""CV002367_3""]",employer_000,medicare,884.54,0.0,98.28,initial_adjudication
+S005446_1,C005446,2025-03-17,"[""CV002367_0"", ""CV002367_1"", ""CV002367_2"", ""CV002367_3""]",employer_021,employer_000,884.54,0.0,98.28,coverage_discovered
+S005449_0,C005449,2025-11-08,"[""CV001116_0"", ""CV001116_1""]",employer_028,medicare,101.27,0.0,11.25,initial_adjudication
+S005476_0,C005476,2024-10-30,"[""CV002176_0"", ""CV002176_1""]",medicare,medicaid_00,607.59,0.0,151.9,initial_adjudication
+S005495_0,C005495,2024-12-26,"[""CV001503_0"", ""CV001503_1""]",medicare,medicaid_01,74.08,0.0,18.52,initial_adjudication
+S005498_0,C005498,2024-01-31,"[""CV000611_0""]",medicare,,658.41,0.0,164.6,initial_adjudication
+S005498_1,C005498,2024-11-15,"[""CV000611_0"", ""CV000611_1""]",employer_022,medicare,740.71,0.0,82.3,coverage_discovered
+S005532_0,C005532,2024-08-06,"[""CV000417_0"", ""CV000417_1""]",employer_028,medicare,1323.49,0.0,147.05,initial_adjudication
+S005533_0,C005533,2024-02-22,"[""CV000781_0"", ""CV000781_1""]",medicare,medicaid_01,213.7,0.0,53.42,initial_adjudication
+S005541_0,C005541,2025-01-31,"[""CV001231_0""]",medicare,,260.97,0.0,65.24,initial_adjudication
+S005546_0,C005546,2024-04-15,"[""CV000508_0"", ""CV000508_1"", ""CV000508_2""]",employer_016,employer_019,233.77,0.0,25.97,initial_adjudication
+S005546_1,C005546,2024-06-12,"[""CV000508_0"", ""CV000508_1"", ""CV000508_2""]",employer_019,employer_016,233.77,0.0,25.97,post_payment_review
+S005577_0,C005577,2025-12-26,"[""CV001329_0"", ""CV001329_1""]",employer_002,medicare,1073.84,0.0,119.32,initial_adjudication
+S005582_0,C005582,2024-10-26,"[""CV000456_0""]",medicare,,257.18,0.0,64.3,initial_adjudication
+S005584_0,C005584,2024-05-29,"[""CV000570_0"", ""CV000570_1""]",medicare,medicaid_01,420.56,0.0,105.14,initial_adjudication
+S005592_0,C005592,2025-03-15,"[""CV000935_0"", ""CV000935_1""]",medicare,medicaid_03,75.02,0.0,18.76,initial_adjudication
+S005625_0,C005625,2025-01-29,"[""CV000432_0"", ""CV000432_2""]",medicare,medicaid_01,114.33,0.0,28.58,initial_adjudication
+S005640_0,C005640,2024-03-18,"[""CV001237_0""]",medicare,,1430.74,0.0,357.69,initial_adjudication
+S005650_0,C005650,2025-08-21,"[""CV001007_0"", ""CV001007_1""]",employer_024,medicare,1546.53,0.0,171.84,initial_adjudication
+S005650_1,C005650,2025-10-05,"[""CV001007_0""]",medicare,,1374.7,0.0,343.67,retroactive_termination_recorded
+S005658_0,C005658,2024-09-21,"[""CV001137_0"", ""CV001137_1""]",medicare,medicaid_03,96.81,0.0,24.2,initial_adjudication
+S005715_0,C005715,2025-07-02,"[""CV002132_0"", ""CV002132_1"", ""CV002132_2""]",employer_003,medicare,273.69,0.0,30.41,initial_adjudication
+S005723_0,C005723,2025-04-01,"[""CV000197_0"", ""CV000197_1""]",employer_022,medicare,1625.0,0.0,180.56,initial_adjudication
+S005723_1,C005723,2025-04-30,"[""CV000197_0""]",medicare,,1444.45,0.0,361.11,retroactive_termination_recorded
+S005727_0,C005727,2024-03-25,"[""CV000035_0"", ""CV000035_1""]",medicare,employer_022,77.3,9.66,9.66,initial_adjudication
+S005727_1,C005727,2024-04-24,"[""CV000035_0"", ""CV000035_1""]",employer_022,medicare,86.96,0.0,9.66,post_payment_review
+S005731_0,C005731,2025-04-19,"[""CV000064_0"", ""CV000064_1""]",medicare,medicaid_01,3693.16,0.0,923.29,initial_adjudication
+S005752_0,C005752,2024-09-06,"[""CV002095_0"", ""CV002095_1""]",medicaid_01,medicare,81.59,37.09,29.67,initial_adjudication
+S005752_1,C005752,2024-12-22,"[""CV002095_0"", ""CV002095_1""]",medicare,medicaid_01,118.68,0.0,29.67,post_payment_review
+S005815_0,C005815,2025-12-04,"[""CV001821_0""]",medicare,,719.59,0.0,179.9,initial_adjudication
+S005816_0,C005816,2025-03-21,"[""CV001790_0"", ""CV001790_1""]",medicare,medicaid_00,244.54,0.0,61.14,initial_adjudication
+S005859_0,C005859,2025-08-02,"[""CV002212_0""]",medicare,,696.07,0.0,174.02,initial_adjudication
+S005933_0,C005933,2025-08-02,"[""CV000582_0"", ""CV000582_1""]",employer_008,medicare,297.17,0.0,33.02,initial_adjudication
+S005946_0,C005946,2024-02-24,"[""CV000098_0""]",medicare,,688.85,0.0,172.21,initial_adjudication
+S005970_0,C005970,2025-10-14,"[""CV001918_0"", ""CV001918_1""]",employer_028,medicare,910.18,0.0,101.13,initial_adjudication
+S005970_1,C005970,2025-10-20,"[""CV001918_0""]",medicare,,809.05,0.0,202.26,retroactive_termination_recorded
+S005983_0,C005983,2025-05-16,"[""CV001883_0"", ""CV001883_1""]",employer_026,medicare,59.95,0.0,6.66,initial_adjudication

@@ -1,0 +1,44 @@
+{
+  "dataset_id": "D04",
+  "kind": "sample",
+  "edition": "1.0",
+  "n_claims": 300,
+  "note": "Rows are copied unchanged from the full dataset. Claims were drawn at random within each scenario.",
+  "tables": {
+    "claim": {
+      "rows": 300,
+      "sha256": "9cd7e4d7e4fb40860d8a7c9c86550d9e3f4a7da408f7144476491169c6b43776",
+      "file": "d04_claim.parquet"
+    },
+    "recovery_finding": {
+      "rows": 300,
+      "sha256": "1f0fb7c274db6abdaa43005609545cddcdd1b69c48c86b47918db4892ff0d83c",
+      "file": "d04_recovery_finding.parquet"
+    },
+    "coverage_state": {
+      "rows": 404,
+      "sha256": "930db0e5869ba9dff9f4cdb7ad22de683879fd483950e00a10c0457bcc478415",
+      "file": "d04_coverage_state.parquet"
+    },
+    "mistaken_payment": {
+      "rows": 104,
+      "sha256": "da53b883ff368f06d86dc6c7ebbea1d4ebd9d451f6878cc97123695529624d5f",
+      "file": "d04_mistaken_payment.parquet"
+    },
+    "demand": {
+      "rows": 104,
+      "sha256": "dda9419ac74d153ecc373c3d7802384b141f40fc512bca9cc7240015dc698e6a",
+      "file": "d04_demand.parquet"
+    },
+    "settlement": {
+      "rows": 104,
+      "sha256": "d95c2f997292a08ff6cff85b64e99af473199d7f14169e22a369bae114da0d39",
+      "file": "d04_settlement.parquet"
+    },
+    "coverage_period": {
+      "rows": 595,
+      "sha256": "233d0ace591c47b09dc90474abf882e40fe3028927ef0f96ed9f6d153240d387",
+      "file": "d04_coverage_period.parquet"
+    }
+  }
+}
