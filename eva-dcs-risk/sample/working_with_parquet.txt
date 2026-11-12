@@ -1,0 +1,33 @@
+Working with Apache Parquet files
+===================================
+
+Every table in this delivery is stored as Apache Parquet, a column-oriented
+binary format. It is not a text format and cannot be opened in a plain text
+editor -- use one of the following:
+
+Python (pandas):
+    import pandas as pd
+    df = pd.read_parquet("crew.parquet")
+
+Python (pyarrow directly, for very large files / streaming):
+    import pyarrow.parquet as pq
+    table = pq.read_table("observations.parquet")
+    df = table.to_pandas()
+
+R:
+    library(arrow)
+    df <- read_parquet("crew.parquet")
+
+Command line (DuckDB, no install beyond the single binary):
+    duckdb -c "SELECT * FROM 'outcomes.parquet' LIMIT 20;"
+
+Why Parquet instead of CSV for every table: columnar storage with built-in
+compression keeps file size far smaller than CSV at this row count, and it
+preserves exact column types (boolean, integer, float32) that CSV would
+otherwise force you to re-infer and can get wrong (a CSV reader guessing
+whether a 0/1 column is boolean or integer is a common source of silent
+bugs). CSV companions are provided for every table at or under 20,000 rows
+(crew, profile, truth, group_frequency_reproduction,
+counterfactual_effect_summary, validation_checks) for quick inspection in a
+spreadsheet; observations and outcomes (30,000 rows each) are Parquet-only
+-- see DATA_DICTIONARY.md for the reasoning.
