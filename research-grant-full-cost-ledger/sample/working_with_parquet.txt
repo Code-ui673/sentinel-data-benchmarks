@@ -1,0 +1,17 @@
+Reading the D09 sample
+======================
+
+d09_sample.parquet is a strict row subset of the full dataset (2 awards,
+denormalized expenditure rows joined with award attributes).
+
+Python:
+    import pandas as pd
+    df = pd.read_parquet('d09_sample.parquet')
+
+R:
+    library(arrow); df <- read_parquet('d09_sample.parquet')
+
+Command line (parquet-tools or duckdb):
+    duckdb -c "SELECT * FROM 'd09_sample.parquet' LIMIT 20;"
+
+A csv twin (d09_sample.csv) ships alongside for spreadsheet tools.
