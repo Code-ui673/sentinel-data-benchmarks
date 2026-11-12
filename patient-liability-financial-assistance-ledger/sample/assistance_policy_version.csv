@@ -1,0 +1,4 @@
+policy_id,version,effective_from,effective_to,fpl_threshold_100,fpl_threshold_200,fpl_threshold_300,discount_at_100,discount_at_200,discount_at_300,eligible_services,lookback_months
+FAP,v1,2024-07-01,2025-06-30,200,225,250,100,60,20,"emergency,inpatient,outpatient,imaging,laboratory",6
+FAP,v2,2025-07-01,2026-06-30,200,250,300,100,50,25,"emergency,inpatient,outpatient,imaging,laboratory",6
+FAP,v3,2026-07-01,2027-06-30,200,250,300,100,60,30,"emergency,inpatient,outpatient,imaging,laboratory",12

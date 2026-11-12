@@ -1,0 +1,91 @@
+{
+  "generated": "2026-11-10",
+  "seed": 20261110,
+  "tables": {
+    "patient_account": {
+      "rows": 250,
+      "columns": [
+        "account_id",
+        "patient_id",
+        "service_date",
+        "gross_balance",
+        "insurance_adjustment",
+        "contractual_write_off",
+        "balance_after_insurance",
+        "service_type"
+      ],
+      "sha256": "d9017c3c0252a630f1f07064569e5716a26f8f5d5a70c81f2f31027f27999a8b"
+    },
+    "assistance_policy_version": {
+      "rows": 3,
+      "columns": [
+        "policy_id",
+        "version",
+        "effective_from",
+        "effective_to",
+        "fpl_threshold_100",
+        "fpl_threshold_200",
+        "fpl_threshold_300",
+        "discount_at_100",
+        "discount_at_200",
+        "discount_at_300",
+        "eligible_services",
+        "lookback_months"
+      ],
+      "sha256": "d6514cd73bb1eba773c6e1f4562ad18b2773d2d968f7ce2e9e876417288ba036"
+    },
+    "assistance_application": {
+      "rows": 157,
+      "columns": [
+        "application_id",
+        "account_id",
+        "policy_version",
+        "application_date",
+        "household_income",
+        "household_size",
+        "fpl_percentage",
+        "eligible",
+        "discount_applied",
+        "assistance_amount"
+      ],
+      "sha256": "45eba19f392989e6d8f8596fdbdb1900a9ff771558bf52293f32af9eac2776c6"
+    },
+    "payment": {
+      "rows": 1001,
+      "columns": [
+        "payment_id",
+        "account_id",
+        "payment_date",
+        "amount",
+        "source"
+      ],
+      "sha256": "e6828547a6698a7292eccf4575a41acf7e5fa1b22e1dc73d16dba3604cf945d2"
+    },
+    "waterfall_step": {
+      "rows": 2158,
+      "columns": [
+        "step_id",
+        "account_id",
+        "step_order",
+        "step_type",
+        "amount_before",
+        "adjustment",
+        "amount_after",
+        "step_date"
+      ],
+      "sha256": "760b35e7ffda65f0eb96f11589ec81d860165b97e9c3b878b1c3b8828265630b"
+    },
+    "liability_finding": {
+      "rows": 250,
+      "columns": [
+        "finding_id",
+        "account_id",
+        "correct_final_liability",
+        "actual_final_liability",
+        "error_type",
+        "scenario_id"
+      ],
+      "sha256": "e07adf3477bd1b4702962f78a1616a3bdebe9638b43acc46175cc3a703ff2f14"
+    }
+  }
+}

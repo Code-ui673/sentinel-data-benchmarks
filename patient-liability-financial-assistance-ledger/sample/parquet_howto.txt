@@ -1,0 +1,29 @@
+Working with Apache Parquet files
+=================================
+
+The six tables in this product are stored as Apache Parquet, a columnar
+format readable from every mainstream analytics tool. Nothing special is
+required; the files are self-contained and compressed.
+
+Python (pandas)
+    import pandas as pd
+    df = pd.read_parquet("patient_account.parquet")
+
+R (arrow / tidyverse)
+    library(arrow)
+    df <- read_parquet("patient_account.parquet")
+
+DuckDB / SQL (over a whole folder)
+    SELECT count(*) FROM 'patient_account.parquet';
+
+Polars, Spark, Excel(2024+ with an ODBC driver), Tableau, Power BI and
+SPSS all read Parquet natively or through a one-line connector.
+
+CSV copies of every table ship next to the Parquet files for environments
+where Parquet is inconvenient. The CSVs are exact row-for-row exports of
+the Parquet tables; when in doubt, the Parquet files are authoritative
+(the manifest.json carries a SHA-256 for each Parquet file only).
+
+manifest.json lists, for every table: row count, column order and the
+SHA-256 of the Parquet file. Verify an download with, for example:
+    sha256sum patient_account.parquet
