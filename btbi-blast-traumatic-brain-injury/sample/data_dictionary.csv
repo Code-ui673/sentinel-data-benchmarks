@@ -1,0 +1,79 @@
+column_name,dtype,category,description_en,description_ru,unit,values_or_range
+subject_id,str,Identifier,Unique synthetic subject identifier.,Уникальный синтетический идентификатор субъекта.,text,BTBI-NNNNNN
+injury_date,datetime64[ms],Context,Synthetic date of the blast injury event.,Синтетическая дата события взрывной травмы.,date,2022-01-02 .. 2024-12-25
+sex,str,Demographics,Biological sex.,Биологический пол.,category,"Male, Female"
+rank_group,str,Demographics,Military rank group.,Воинская категория.,category,"Enlisted, Officer"
+age_years,int64,Demographics,Age at time of injury.,Возраст на момент травмы.,years,18-60
+race_minority_flag,bool,Demographics,"Flag for minority race group (aggregated, non-identifying).","Флаг принадлежности к расовому меньшинству (агрегированно, неидентифицирующе).",boolean,True/False
+hispanic_flag,bool,Demographics,Flag for Hispanic/Latino ethnicity.,Флаг латиноамериканской этнической принадлежности.,boolean,True/False
+education_years,int64,Demographics,Years of completed formal education.,Количество лет формального образования.,years,11-18
+psychiatric_history_flag,bool,Demographics,Pre-injury psychiatric history present.,Наличие психиатрического анамнеза до травмы.,boolean,True/False
+blast_mechanism,str,Injury context,Mechanism/device causing the blast.,"Механизм/устройство, вызвавшее взрыв.",category,"IED, Mortar, RPG, Rocket, Grenade, Landmine, Aerial bomb"
+distance_class,str,Injury context,"Estimated standoff distance from the blast, banded.","Оценочное расстояние от взрыва, по диапазонам.",category,"<=5m, 5-12m, 12-25m, >25m"
+helmet_type,str,Injury context,Helmet worn at time of injury.,Тип шлема в момент травмы.,category,"ACH, ECH, IHPS, LWH"
+prior_blast_exposures,int64,Injury context,"Count of prior blast exposures (lifetime, before index event).","Количество предыдущих взрывных воздействий (за всю жизнь, до текущего события).",count,0-109
+lifetime_mtbi_count,int64,Injury context,Lifetime count of mild TBI events including the index event.,"Общее количество легких ЧМТ за всю жизнь, включая текущий случай.",count,1-15
+tbi_severity,str,Injury context,Clinical severity classification of the index TBI.,Клиническая классификация тяжести текущей ЧМТ.,category,"Mild, Moderate, Severe, Penetrating"
+gcs_admission,int64,Clinical - acute,Glasgow Coma Scale score at hospital admission.,Шкала Глазго (GCS) при поступлении.,score 3-15,3-15
+loc_present,bool,Clinical - acute,Loss of consciousness present at injury.,Наличие потери сознания в момент травмы.,boolean,True/False
+loc_duration_minutes,float64,Clinical - acute,Duration of loss of consciousness.,Длительность потери сознания.,minutes,0-24987.2 (extended values represent prolonged coma in severe/penetrating cases)
+aoc_present,bool,Clinical - acute,Alteration of consciousness present.,Наличие изменения уровня сознания.,boolean,True/False
+aoc_duration_hours,float64,Clinical - acute,Duration of alteration of consciousness.,Длительность изменения уровня сознания.,hours,0-789.9
+pta_present,bool,Clinical - acute,Post-traumatic amnesia present.,Наличие посттравматической амнезии.,boolean,True/False
+pta_duration_hours,float64,Clinical - acute,Duration of post-traumatic amnesia.,Длительность посттравматической амнезии.,hours,0-1837.9
+goat_score_emergence,int64,Clinical - acute,Galveston Orientation and Amnesia Test score at emergence from PTA (-1 = not applicable/not assessed).,Шкала GOAT при выходе из посттравматической амнезии (-1 = неприменимо/не оценивалось).,score 0-100 or -1,-1-100
+ct_abnormal,bool,Imaging,Any abnormal finding on head CT.,Любые патологические находки на КТ головы.,boolean,True/False
+ct_tsah,bool,Imaging,Traumatic subarachnoid hemorrhage on CT.,Травматическое субарахноидальное кровоизлияние на КТ.,boolean,True/False
+ct_ivh,bool,Imaging,Intraventricular hemorrhage on CT.,Внутрижелудочковое кровоизлияние на КТ.,boolean,True/False
+ct_mass_lesion,bool,Imaging,Mass lesion present on CT.,Объёмное поражение на КТ.,boolean,True/False
+ct_cisterns_abnormal,bool,Imaging,Basal cisterns abnormal/compressed on CT.,Патология/компрессия базальных цистерн на КТ.,boolean,True/False
+ich_subtype,str,Imaging,Dominant intracranial hemorrhage subtype.,Доминирующий подтип внутричерепного кровоизлияния.,category,"None, EDH, SDH, TSAH, Contusion-IPH"
+ct_marshall_grade,str,Imaging,Marshall CT Classification grade for diffuse/focal injury.,Градация по шкале Marshall (КТ-классификация ЧМТ).,category I-VI,"I, II, III, IV, V, VI"
+midline_shift_mm,float64,Imaging,Midline shift measured on CT.,Смещение срединных структур по КТ.,mm,0.0-17.5
+midline_shift_gt5mm,bool,Imaging,Midline shift greater than 5mm (clinically significant threshold).,Смещение срединных структур более 5 мм (клинически значимый порог).,boolean,True/False
+ct_rotterdam_score,int64,Imaging,Rotterdam CT score (prognostic composite).,Шкала Rotterdam (прогностический КТ-индекс).,score 1-6,1-6
+icd11_primary,str,Coding,Primary ICD-11 diagnosis code.,Первичный код диагноза МКБ-11.,code,"NA07.0, NA07.02, NA07.05, NA07.06"
+icd11_secondary,str,Coding,"Secondary ICD-11 diagnosis code, if any.","Вторичный код МКБ-11, если есть.",code or None,"NA07.5, NA07.6, NA07.7, NA07.8, None"
+snomed_tbi_code,str,Coding,SNOMED CT concept code for the TBI diagnosis.,Код SNOMED CT для диагноза ЧМТ.,code,"127298000, 127302008"
+mace2_baseline_est,int64,Cognitive - acute,Estimated pre-injury baseline MACE2 total score.,Расчётный исходный (до травмы) общий балл MACE2.,score 19-30,19-30
+mace2_total_0h,int64,Cognitive - acute,MACE2 total score at 0 hours (point of injury/initial exam).,Общий балл MACE2 через 0 часов (в момент получения травмы/первичный осмотр).,score 14-30,14-30
+mace2_total_24h,int64,Cognitive - acute,MACE2 total score at 24 hours.,Общий балл MACE2 через 24 часа.,score 16-30,16-30
+mace2_total_72h,int64,Cognitive - acute,MACE2 total score at 72 hours.,Общий балл MACE2 через 72 часа.,score 18-30,18-30
+mace2_total_7d,int64,Cognitive - acute,MACE2 total score at 7 days.,Общий балл MACE2 через 7 дней.,score 17-30,17-30
+mace2_abnormal_0h,bool,Cognitive - acute,MACE2 score flagged abnormal at 0 hours.,Балл MACE2 отмечен как патологический через 0 часов.,boolean,True/False
+impact_verbal_memory_baseline_est,float64,Cognitive - ImPACT,Estimated pre-injury baseline ImPACT verbal memory composite.,Расчётный исходный композитный балл ImPACT (вербальная память).,composite score,51.1-110.3
+impact_verbal_memory_30d,float64,Cognitive - ImPACT,ImPACT verbal memory composite at 30 days.,Композитный балл ImPACT (вербальная память) через 30 дней.,composite score,47.5-115.1
+impact_verbal_memory_90d,float64,Cognitive - ImPACT,ImPACT verbal memory composite at 90 days.,Композитный балл ImPACT (вербальная память) через 90 дней.,composite score,51.0-111.3
+impact_visual_memory_baseline_est,float64,Cognitive - ImPACT,Estimated pre-injury baseline ImPACT visual memory composite.,Расчётный исходный композитный балл ImPACT (зрительная память).,composite score,31.7-101.8
+impact_visual_memory_30d,float64,Cognitive - ImPACT,ImPACT visual memory composite at 30 days.,Композитный балл ImPACT (зрительная память) через 30 дней.,composite score,21.1-97.2
+impact_visual_memory_90d,float64,Cognitive - ImPACT,ImPACT visual memory composite at 90 days.,Композитный балл ImPACT (зрительная память) через 90 дней.,composite score,26.3-102.9
+impact_processing_speed_baseline_est,float64,Cognitive - ImPACT,Estimated pre-injury baseline ImPACT processing speed composite.,Расчётный исходный композитный балл ImPACT (скорость обработки информации).,composite score,9.1-57.0
+impact_processing_speed_30d,float64,Cognitive - ImPACT,ImPACT processing speed composite at 30 days.,Композитный балл ImPACT (скорость обработки) через 30 дней.,composite score,7.9-59.0
+impact_processing_speed_90d,float64,Cognitive - ImPACT,ImPACT processing speed composite at 90 days.,Композитный балл ImPACT (скорость обработки) через 90 дней.,composite score,9.1-61.5
+impact_reaction_time_s_baseline_est,float64,Cognitive - ImPACT,Estimated pre-injury baseline ImPACT reaction time.,Расчётное исходное время реакции ImPACT.,seconds,0.28-0.90
+impact_reaction_time_s_30d,float64,Cognitive - ImPACT,ImPACT reaction time at 30 days.,Время реакции ImPACT через 30 дней.,seconds,0.25-0.91
+impact_reaction_time_s_90d,float64,Cognitive - ImPACT,ImPACT reaction time at 90 days.,Время реакции ImPACT через 90 дней.,seconds,0.29-0.94
+voms_symptom_provocation,bool,Vestibular/ocular,VOMS testing provoked symptoms.,Тестирование VOMS спровоцировало симптомы.,boolean,True/False
+voms_npc_cm,float64,Vestibular/ocular,VOMS near-point-of-convergence distance.,Дистанция ближней точки конвергенции (VOMS).,cm,0.2-12.5
+voms_npc_abnormal,bool,Vestibular/ocular,Near-point-of-convergence result flagged abnormal (>5cm).,Результат ближней точки конвергенции отмечен как патологический (>5 см).,boolean,True/False
+voms_vor_positive,bool,Vestibular/ocular,Vestibulo-ocular reflex test positive for symptom provocation.,Тест вестибуло-окулярного рефлекса положителен (провокация симптомов).,boolean,True/False
+headache_chronic,bool,Outcomes - symptoms,Chronic post-traumatic headache present.,Наличие хронической посттравматической головной боли.,boolean,True/False
+hit6_6mo,int64,Outcomes - symptoms,Headache Impact Test-6 score at 6 months.,Шкала HIT-6 (влияние головной боли) через 6 месяцев.,score 36-78,36-78
+hit6_12mo,int64,Outcomes - symptoms,Headache Impact Test-6 score at 12 months.,Шкала HIT-6 через 12 месяцев.,score 36-78,36-76
+pcl5_6mo,int64,Outcomes - mental health,PTSD Checklist for DSM-5 (PCL-5) total score at 6 months.,"Опросник ПТСР по DSM-5 (PCL-5), итоговый балл через 6 месяцев.",score 0-80,0-75
+ptsd_screen_positive_6mo,bool,Outcomes - mental health,PCL-5 screen positive for probable PTSD at 6 months (standard cutoff).,Положительный скрининг на вероятное ПТСР по PCL-5 через 6 месяцев (стандартный порог).,boolean,True/False
+pcl5_12mo,int64,Outcomes - mental health,PCL-5 total score at 12 months.,Итоговый балл PCL-5 через 12 месяцев.,score 0-80,0-73
+psqi_6mo,int64,Outcomes - sleep,Pittsburgh Sleep Quality Index global score at 6 months.,"Индекс качества сна Питтсбурга (PSQI), общий балл через 6 месяцев.",score 0-21,3-21
+psqi_poor_sleep_6mo,bool,Outcomes - sleep,PSQI flags poor sleep quality at 6 months (score >5).,PSQI отмечает плохое качество сна через 6 месяцев (балл >5).,boolean,True/False
+psqi_12mo,int64,Outcomes - sleep,Pittsburgh Sleep Quality Index global score at 12 months.,"Индекс PSQI, общий балл через 12 месяцев.",score 0-21,0-21
+phq9_6mo,int64,Outcomes - mental health,Patient Health Questionnaire-9 (depression) score at 6 months.,Опросник PHQ-9 (депрессия) через 6 месяцев.,score 0-27,0-27
+phq9_12mo,int64,Outcomes - mental health,Patient Health Questionnaire-9 score at 12 months.,Опросник PHQ-9 через 12 месяцев.,score 0-27,0-25
+neurocog_residual_90d,bool,Outcomes - cognitive,Residual neurocognitive deficit present at 90 days (composite judgment from ImPACT domains).,Наличие остаточного нейрокогнитивного дефицита через 90 дней (сводная оценка по доменам ImPACT).,boolean,True/False
+rtd_status_12mo,str,Outcomes - functional,Return-to-duty status at 12 months.,Статус возвращения к службе через 12 месяцев.,category,"Returned, Not returned, Medical discharge"
+label_prolonged_recovery_30d,bool,Label,Ground-truth label: recovery prolonged beyond 30 days.,Эталонная метка: восстановление затянулось дольше 30 дней.,boolean,True/False
+label_rtd_failure,bool,Label,Ground-truth label: failed to return to duty at 12 months.,Эталонная метка: не вернулся к службе через 12 месяцев.,boolean,True/False
+label_chronic_pcs,bool,Label,Ground-truth label: chronic post-concussive syndrome.,Эталонная метка: хронический посткоммоционный синдром.,boolean,True/False
+gose_12mo,int64,Outcomes - functional,Glasgow Outcome Scale Extended score at 12 months.,Расширенная шкала исходов Глазго (GOSE) через 12 месяцев.,score 1-8,1-8
+gose_favorable_12mo,bool,Outcomes - functional,GOSE score indicates favorable outcome (>=7) at 12 months.,Балл GOSE указывает на благоприятный исход (>=7) через 12 месяцев.,boolean,True/False
+cte_exposure_score,int64,Research feature,Cumulative blast-exposure dose proxy (hypothesis-generation feature). See passport warning: no validated dose-response link to CTE exists in the literature.,Суммарный показатель дозы взрывного воздействия (признак для генерации гипотез). См. предупреждение в паспорте: валидированной дозозависимой связи с ХТЭ в литературе не установлено.,index,1-212
+cte_risk_index,int64,Research feature,"Hypothesis-generation CTE risk index. NOT a validated clinical risk score — do not use for diagnosis or risk stratification (per Brix et al. 2017, J Neurotrauma).","Индекс риска ХТЭ для генерации гипотез. НЕ является валидированной клинической шкалой риска — не использовать для диагностики или стратификации риска (см. Brix et al. 2017, J Neurotrauma).",index 0-3,0-3

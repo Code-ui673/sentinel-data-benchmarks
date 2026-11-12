@@ -1,0 +1,32 @@
+HOW TO OPEN AND USE THE PARQUET FILES
+=====================================
+
+Apache Parquet is a columnar binary format. It is NOT human-readable in a text
+editor. Use one of the following:
+
+Python (pandas):
+    import pandas as pd
+    df = pd.read_parquet("btbi_wide.parquet")
+    print(df.shape, df.columns)
+
+Python (pyarrow, for schema inspection):
+    import pyarrow.parquet as pq
+    print(pq.read_schema("btbi_wide.parquet"))
+
+R:
+    library(arrow)
+    df <- read_parquet("btbi_wide.parquet")
+
+DuckDB (SQL directly on the file):
+    SELECT tbi_severity, COUNT(*) FROM 'btbi_wide.parquet' GROUP BY 1;
+
+Command line (quick look):
+    pip install parquet-tools
+    parquet-tools show btbi_wide.parquet -n 5
+
+Notes:
+- All data content is English. No NULL values; numeric not-applicable = -1.
+- btbi_wide.parquet: one row per subject (N=20,000).
+- btbi_longitudinal.parquet: long format, one row per measurement event.
+- omop_*.parquet: OMOP CDM v5.4-shaped tables; concept_id=0 (unmapped),
+  source codes preserved in *_source_value columns.
