@@ -9,6 +9,13 @@ Each dataset lives in its own folder: a free row-level sample, the exact validat
 | Dataset | Sample | Full dataset |
 |---|---|---|
 | Post-Landing Orthostatic Intolerance | [`post-landing-orthostatic-intolerance/`](post-landing-orthostatic-intolerance/) | [sentineldata.com.ua/dataset/post-landing-orthostatic-intolerance](https://sentineldata.com.ua/dataset/post-landing-orthostatic-intolerance) |
+| bTBI — Blast Traumatic Brain Injury in Blast-Exposed Service Members | [`btbi-blast-traumatic-brain-injury/`](btbi-blast-traumatic-brain-injury/) | [sentineldata.com.ua/dataset/btbi-blast-traumatic-brain-injury](https://sentineldata.com.ua/dataset/btbi-blast-traumatic-brain-injury) |
+| EVA Decompression Sickness Risk Dataset | [`eva-dcs-risk/`](eva-dcs-risk/) | [sentineldata.com.ua/dataset/eva-dcs-risk](https://sentineldata.com.ua/dataset/eva-dcs-risk) |
+| Lung Cancer Ion-Trap Vulnerability: Synthetic Virtual Screening and Hypothesis Falsification Dataset (Triple Trap) | [`triple-trap-lung-cancer-ion-trap-vulnerability/`](triple-trap-lung-cancer-ion-trap-vulnerability/) | [sentineldata.com.ua/dataset/triple-trap-lung-cancer-ion-trap-vulnerability](https://sentineldata.com.ua/dataset/triple-trap-lung-cancer-ion-trap-vulnerability) |
+| ORBIT-PK: THREE-DRUG SPACEFLIGHT PK CALIBRATED | [`orbit-pk-three-drug-spaceflight-pk-calibrated/`](orbit-pk-three-drug-spaceflight-pk-calibrated/) | [sentineldata.com.ua/dataset/orbit-pk-three-drug-spaceflight-pk-calibrated](https://sentineldata.com.ua/dataset/orbit-pk-three-drug-spaceflight-pk-calibrated) |
+| Research Grant Full-Cost Ledger | [`research-grant-full-cost-ledger/`](research-grant-full-cost-ledger/) | [sentineldata.com.ua/dataset/research-grant-full-cost-ledger](https://sentineldata.com.ua/dataset/research-grant-full-cost-ledger) |
+| Coverage Priority & Recovery Timeline | [`coverage-priority-recovery-timeline/`](coverage-priority-recovery-timeline/) | [sentineldata.com.ua/dataset/coverage-priority-recovery-timeline](https://sentineldata.com.ua/dataset/coverage-priority-recovery-timeline) |
+| Patient Liability & Financial Assistance Ledger | [`patient-liability-financial-assistance-ledger/`](patient-liability-financial-assistance-ledger/) | [sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger](https://sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger) |
 
 ## Status
 
