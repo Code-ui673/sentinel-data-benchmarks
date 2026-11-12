@@ -1,0 +1,16 @@
+{
+ "n_subjects": 32,
+ "seed": 20261027,
+ "note": "a true row-level subset of the full delivery run (same seed, same generation pass) selected by subject_id, not a separate generation",
+ "generated_at_utc": "2026-10-27T11:56:30Z",
+ "environment": {
+  "python": "3.13.17",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "pyarrow": "26.0.0",
+  "scikit_learn": "1.9.1",
+  "note": "versions queried from the running interpreter at build time, not estimated (Doctrine Article VIII)"
+ },
+ "kernel_sha256": "b12645cc8f27012610ddcc21e188e57166e2e079f05e72bef82893da89750257",
+ "kernel_file": "orthostatic_kernel.py"
+}

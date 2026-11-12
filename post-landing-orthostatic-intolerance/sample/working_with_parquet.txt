@@ -1,0 +1,34 @@
+WORKING WITH APACHE PARQUET FILES
+
+Parquet is a columnar binary format. It is not a text file and cannot be
+opened in Notepad or Excel directly.
+
+Python (recommended):
+    pip install pandas pyarrow
+    import pandas as pd
+    df = pd.read_parquet("crew.parquet")
+    print(df.head())
+
+R:
+    install.packages("arrow")
+    library(arrow)
+    df <- read_parquet("crew.parquet")
+
+Excel / no-code:
+    Use a Parquet viewer add-in, or convert once with Python:
+    import pandas as pd
+    pd.read_parquet("crew.parquet").to_csv("crew.csv", index=False)
+    (Not recommended for truth.parquet / observations.parquet -- these are
+    several million rows each and a spreadsheet application will struggle
+    with files this size. Load them with pandas/R/SQL instead.)
+
+SQL engines (DuckDB, recommended for large tables):
+    pip install duckdb
+    import duckdb
+    duckdb.sql("SELECT * FROM 'truth.parquet' WHERE subject_id = 1").show()
+
+Joining the four tables: subject_id is the shared key for crew/truth/
+observations/outcomes. truth and observations additionally share
+test_day + second. outcomes has two rows per subject_id (scenario = factual
+or counterfactual) -- filter by scenario before joining to crew/truth/
+observations if you only want the factual (actually-tested) rows.
