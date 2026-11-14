@@ -1,0 +1,27 @@
+ALZ-PATHWAY-TWIN - how to read the files
+
+Format: Apache Parquet, zstd compression. Float columns are float32.
+
+Python (pandas + pyarrow):
+    import pandas as pd
+    cohort   = pd.read_parquet("cohort.parquet")
+    outcomes = pd.read_parquet("outcomes.parquet")
+    visits   = pd.read_parquet("visits/scenario_id=S15/part-0.parquet")      # one folder per scenario
+    truth    = pd.read_parquet("truth/truth_quarterly/scenario_id=S15/part-0.parquet")
+
+All scenarios of one table at once:
+    import pyarrow.dataset as ds
+    visits = ds.dataset("visits", format="parquet").to_table().to_pandas()
+
+R (arrow):
+    library(arrow)
+    outcomes <- read_parquet("outcomes.parquet")
+
+DuckDB / SQL:
+    SELECT scenario_id, avg(dementia_free_years) FROM 'outcomes.parquet' GROUP BY 1;
+
+Keys: subject_id is the same person in every scenario. (scenario_id, subject_id) is the key of the per-scenario tables.
+The control of a person for any scenario is that person's rows in S00.
+Files under truth/ hold hidden model quantities. They are for checking models, not for training them.
+Run settings are stored in the Parquet metadata under the key "alz_twin_run".
+Column meanings: data_dictionary.csv. Table layout: schema.json. File checksums: manifest.csv.

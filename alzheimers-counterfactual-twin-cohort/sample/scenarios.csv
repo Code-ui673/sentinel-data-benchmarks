@@ -1,0 +1,28 @@
+scenario_id,world,description,heterogeneity,theta_A_pre,theta_A_sym,theta_I,theta_G,requested_shares,shares_capped_for_admissibility,user_defined,outside_calibrated_range,note
+S00,W0,"natural course, no detection and no treatment",none,0.0,0.0,0.0,0.0,,False,False,False,
+S01,W1,clearance-enhancing therapy after detection,hom,0.0,0.0,0.0,0.0,0.0000/0.0000/0.0000/0.0000,False,False,False,
+S02,W1,clearance-enhancing therapy after detection,conc,0.0,0.0,0.0,0.0,0.0000/0.0000/0.0000/0.0000,False,False,False,
+S03,W1,clearance-enhancing therapy after detection,hom,0.0,0.0,0.0,0.30043,0.0000/0.0000/0.0000/0.3004,False,False,False,
+S04,W1,clearance-enhancing therapy after detection,conc,0.0,0.0,0.0,0.30043,0.0000/0.0000/0.0000/0.3004,False,False,False,
+S05,W1,clearance-enhancing therapy after detection,hom,0.0,0.0,0.0,0.600861,0.0000/0.0000/0.0000/0.6009,False,False,False,
+S06,W1,clearance-enhancing therapy after detection,conc,0.0,0.0,0.0,0.600861,0.0000/0.0000/0.0000/0.6009,False,False,False,
+S07,W2,soluble TNF inhibitor after detection,hom,0.0,0.0,0.0,0.0,0.0000/0.0000/0.0000/0.0000,False,False,False,
+S08,W2,soluble TNF inhibitor after detection,conc,0.0,0.0,0.0,0.0,0.0000/0.0000/0.0000/0.0000,False,False,False,
+S09,W2,soluble TNF inhibitor after detection,hom,0.0,0.0,0.189651,0.0,0.0000/0.0000/0.1897/0.0000,False,False,False,
+S10,W2,soluble TNF inhibitor after detection,conc,0.0,0.0,0.189651,0.0,0.0000/0.0000/0.1897/0.0000,False,False,False,
+S11,W2,soluble TNF inhibitor after detection,hom,0.0,0.0,0.379303,0.0,0.0000/0.0000/0.3793/0.0000,False,False,False,
+S12,W2,soluble TNF inhibitor after detection,conc,0.0,0.0,0.379303,0.0,0.0000/0.0000/0.3793/0.0000,False,False,False,
+S13,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,hom,0.30043,0.600861,0.0,0.0,0.3004/0.6009/0.0000/0.0000,False,False,False,
+S14,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,conc,0.30043,0.600861,0.0,0.0,0.3004/0.6009/0.0000/0.0000,False,False,False,
+S15,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,hom,0.600861,0.600861,0.0,0.0,0.6009/0.6009/0.0000/0.0000,False,False,False,
+S16,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,conc,0.600861,0.600861,0.0,0.0,0.6009/0.6009/0.0000/0.0000,False,False,False,
+S17,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,hom,0.901291,0.600861,0.0,0.0,0.9013/0.6009/0.0000/0.0000,False,False,False,
+S18,W3,lecanemab 10 mg/kg every two weeks for the configured number of months after detection,conc,0.901291,0.600861,0.0,0.0,0.9013/0.6009/0.0000/0.0000,False,False,False,
+S19,W3L,lecanemab after clinical detection only (no blood screening),hom,0.600861,0.600861,0.0,0.0,0.6009/0.6009/0.0000/0.0000,False,False,False,
+S20,W3L,lecanemab after clinical detection only (no blood screening),conc,0.600861,0.600861,0.0,0.0,0.6009/0.6009/0.0000/0.0000,False,False,False,
+S21,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",hom,0.30043,0.600861,0.0,0.0,0.3004/0.6009/0.0000/0.0000,False,False,False,
+S22,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",conc,0.30043,0.600861,0.0,0.0,0.3004/0.6009/0.0000/0.0000,False,False,False,
+S23,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",hom,0.600861,0.600861,0.130865,0.207305,0.6009/0.6009/0.1897/0.3004,True,False,False,Requested shares would exceed 1 for some person because the calibrated amyloid share already uses about 60 percent of the budget. Inflammation and clearance shares were scaled down together to the largest admissible values.
+S24,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",conc,0.600861,0.600861,0.130865,0.207305,0.6009/0.6009/0.1897/0.3004,True,False,False,Requested shares would exceed 1 for some person because the calibrated amyloid share already uses about 60 percent of the budget. Inflammation and clearance shares were scaled down together to the largest admissible values.
+S25,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",hom,0.600861,0.600861,0.130865,0.207305,0.9013/0.6009/0.3793/0.6009,True,False,False,Requested shares would exceed 1 for some person because the calibrated amyloid share already uses about 60 percent of the budget. Inflammation and clearance shares were scaled down together to the largest admissible values. The grid points S25 and S26 therefore coincide with S23 and S24.
+S26,W4,"therapy matched to the subtype (1 and 3 anti-amyloid, 2 anti-inflammatory, 4 and 5 clearance)",conc,0.600861,0.600861,0.130865,0.207305,0.9013/0.6009/0.3793/0.6009,True,False,False,Requested shares would exceed 1 for some person because the calibrated amyloid share already uses about 60 percent of the budget. Inflammation and clearance shares were scaled down together to the largest admissible values. The grid points S25 and S26 therefore coincide with S23 and S24.

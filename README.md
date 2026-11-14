@@ -16,6 +16,7 @@ Each dataset lives in its own folder: a free row-level sample, the exact validat
 | Research Grant Full-Cost Ledger | [`research-grant-full-cost-ledger/`](research-grant-full-cost-ledger/) | [sentineldata.com.ua/dataset/research-grant-full-cost-ledger](https://sentineldata.com.ua/dataset/research-grant-full-cost-ledger) |
 | Coverage Priority & Recovery Timeline | [`coverage-priority-recovery-timeline/`](coverage-priority-recovery-timeline/) | [sentineldata.com.ua/dataset/coverage-priority-recovery-timeline](https://sentineldata.com.ua/dataset/coverage-priority-recovery-timeline) |
 | Patient Liability & Financial Assistance Ledger | [`patient-liability-financial-assistance-ledger/`](patient-liability-financial-assistance-ledger/) | [sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger](https://sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger) |
+| Alzheimer's Counterfactual Twin Cohort | [`alzheimers-counterfactual-twin-cohort/`](alzheimers-counterfactual-twin-cohort/) | [sentineldata.com.ua/dataset/alzheimers-counterfactual-twin-cohort](https://sentineldata.com.ua/dataset/alzheimers-counterfactual-twin-cohort) |
 
 ## Status
 

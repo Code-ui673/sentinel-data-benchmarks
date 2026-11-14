@@ -1,0 +1,128 @@
+{
+ "format": "Apache Parquet, zstd",
+ "partitioning": {
+  "visits": "one folder per scenario_id",
+  "truth/truth_quarterly": "one folder per scenario_id"
+ },
+ "tables": {
+  "cohort": {
+   "subject_id": "int32",
+   "age_baseline": "float",
+   "sex": "category",
+   "apoe_e4_alleles": "int8"
+  },
+  "scenarios": {
+   "scenario_id": "string",
+   "world": "string",
+   "description": "string",
+   "heterogeneity": "string",
+   "theta_A_pre": "float",
+   "theta_A_sym": "float",
+   "theta_I": "float",
+   "theta_G": "float",
+   "requested_shares": "string",
+   "shares_capped_for_admissibility": "bool",
+   "user_defined": "bool",
+   "outside_calibrated_range": "bool",
+   "note": "string"
+  },
+  "visits": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "visit_year": "int8",
+   "age": "float",
+   "mmse": "int8",
+   "cdr_sb": "float",
+   "clinical_stage": "category",
+   "ptau217_pgml": "float",
+   "ptau217_zone": "category",
+   "screening_visit": "bool"
+  },
+  "pet_scans": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "scan_age": "float",
+   "reason": "category",
+   "amyloid_centiloid": "float",
+   "amyloid_positive": "bool"
+  },
+  "detection_events": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "detection_age": "float",
+   "route": "category",
+   "ptau217_zone_at_detection": "category",
+   "cdr_sb_at_detection": "float"
+  },
+  "treatments": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "therapy": "category",
+   "start_age": "float",
+   "stop_age": "float",
+   "stop_reason": "category",
+   "assigned_by": "category"
+  },
+  "adverse_events": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "event": "category",
+   "onset_age": "float"
+  },
+  "subtype_assays": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "assay_age": "float",
+   "subtype_measured": "int8"
+  },
+  "outcomes": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "mci_event": "bool",
+   "dementia_event": "bool",
+   "moderate_event": "bool",
+   "death_event": "bool",
+   "age_mci": "float",
+   "age_dementia": "float",
+   "age_moderate": "float",
+   "age_death_or_censor": "float",
+   "dementia_free_years": "float",
+   "cdr_sb_last": "float",
+   "ever_treated": "bool"
+  },
+  "truth/subject_truth": {
+   "subject_id": "int32",
+   "subtype_true": "int8",
+   "amyloid_onset_age": "float",
+   "neurodegeneration_rate": "float",
+   "cognitive_reserve": "float",
+   "tau_rate_multiplier": "float"
+  },
+  "truth/theta_by_subject": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "theta_A_pre_i": "float",
+   "theta_A_sym_i": "float",
+   "theta_I_i": "float",
+   "theta_G_i": "float"
+  },
+  "truth/truth_quarterly": {
+   "scenario_id": "string",
+   "subject_id": "int32",
+   "quarter": "int16",
+   "age": "float",
+   "amyloid_cl": "float",
+   "tau_burden": "float",
+   "inflammation": "float",
+   "clearance": "float",
+   "neurodegeneration": "float",
+   "cdr_sb_true": "float",
+   "stage_true": "category",
+   "m_amyloid": "float",
+   "m_inflammation": "float",
+   "m_clearance": "float",
+   "progression_factor": "float",
+   "on_therapy": "bool"
+  }
+ }
+}

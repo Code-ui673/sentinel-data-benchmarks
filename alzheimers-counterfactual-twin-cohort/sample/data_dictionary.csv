@@ -1,0 +1,96 @@
+table,column,type,unit_or_values,observed_range_in_S00,description
+cohort,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+cohort,age_baseline,float,years,50 to 75,Age at entry
+cohort,sex,category,"female, male",,Sex
+cohort,apoe_e4_alleles,int8,count 0-2,0 to 2,Number of APOE epsilon-4 alleles
+scenarios,scenario_id,string,,,Scenario identifier S00 to S26
+scenarios,world,string,"W0, W1, W2, W3, W3L, W4",,World the scenario belongs to
+scenarios,description,string,,,One-phrase description of the strategy
+scenarios,heterogeneity,string,"none, hom, conc",,How the effect share is spread over people: homogeneous or concentrated
+scenarios,theta_A_pre,float,0-1,0 to 0.901291,Population mean amyloid-mechanism share before symptoms
+scenarios,theta_A_sym,float,0-1,0 to 0.600861,Population mean amyloid-mechanism share at symptomatic stage
+scenarios,theta_I,float,0-1,0 to 0.379303,Population mean inflammation-mechanism share
+scenarios,theta_G,float,0-1,0 to 0.600861,Population mean clearance-mechanism share
+scenarios,requested_shares,string,,,Shares requested before the admissibility rule: pre/sym/inflammation/clearance
+scenarios,shares_capped_for_admissibility,bool,bool,,True when the requested shares were reduced so that no person exceeds a total effect of 1
+scenarios,user_defined,bool,bool,,True for shares set by the user
+scenarios,outside_calibrated_range,bool,bool,,True when a setting lies outside the calibrated range
+scenarios,note,string,,,Free-text note on the scenario
+visits,scenario_id,string,,,Scenario identifier S00 to S26
+visits,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+visits,visit_year,int8,years from entry,0 to 25,Annual visit index; no rows after death
+visits,age,float,years,50 to 100,Age at the visit or time point
+visits,mmse,int8,0-30,0 to 30,Observed MMSE with test-retest noise
+visits,cdr_sb,float,"0-18, step 0.5",-0 to 18,"Observed CDR sum of boxes with noise, rounded to 0.5"
+visits,clinical_stage,category,"cognitively_unimpaired, mci, mild_dementia, moderate_dementia, severe_dementia",,Stage by observed CDR-SB; may flip back and forth near a boundary
+visits,ptau217_pgml,float,pg/mL,0.00247599 to 1.19783,Plasma p-tau217 with assay noise
+visits,ptau217_zone,category,"negative, intermediate, positive",,Zone by two cut points
+visits,screening_visit,bool,bool,,"True in screening years (0, 2, 4, ...)"
+pet_scans,scenario_id,string,,,Scenario identifier S00 to S26
+pet_scans,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+pet_scans,scan_age,float,years,50 to 98.9167,Age at PET
+pet_scans,reason,category,"screening_confirmation, clinical_diagnosis",,Reason for the scan
+pet_scans,amyloid_centiloid,float,CL,-27.8747 to 165.285,Measured amyloid with measurement error; may be negative within error
+pet_scans,amyloid_positive,bool,bool,,Above the positivity threshold
+detection_events,scenario_id,string,,,Scenario identifier S00 to S26
+detection_events,subject_id,int32,,3 to 9999,"Person number, shared by all tables and all scenarios"
+detection_events,detection_age,float,years,50 to 96.6667,Age at detection
+detection_events,route,category,"screening, clinical",,Detection route
+detection_events,ptau217_zone_at_detection,category,"negative, intermediate, positive",,Zone of the latest assay
+detection_events,cdr_sb_at_detection,float,0-18,0 to 18,Observed CDR-SB at detection
+treatments,scenario_id,string,,,Scenario identifier S00 to S26
+treatments,subject_id,int32,,3 to 9999,"Person number, shared by all tables and all scenarios"
+treatments,therapy,category,"lecanemab, tnf_inhibitor, clearance_therapy",,Therapy given
+treatments,start_age,float,years,50 to 96.6667,Start of therapy
+treatments,stop_age,float,years,50.75 to 100,End of therapy
+treatments,stop_reason,category,"course_completed, death, end_of_follow_up",,Why therapy ended
+treatments,assigned_by,category,"world_policy, subtype_match",,How the therapy was chosen
+adverse_events,scenario_id,string,,,Scenario identifier S00 to S26
+adverse_events,subject_id,int32,,28 to 9872,"Person number, shared by all tables and all scenarios"
+adverse_events,event,category,"aria_e, aria_h",,Adverse event type
+adverse_events,onset_age,float,years,50.6667 to 89.8333,Age at onset; only during a lecanemab course
+subtype_assays,scenario_id,string,,,Scenario identifier S00 to S26
+subtype_assays,subject_id,int32,,3 to 9999,"Person number, shared by all tables and all scenarios"
+subtype_assays,assay_age,float,years,50 to 96.6667,Age at the subtype assay
+subtype_assays,subtype_measured,int8,1-5,1 to 5,"Measured subtype; equals the true subtype (best case, no classifier error)"
+outcomes,scenario_id,string,,,Scenario identifier S00 to S26
+outcomes,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+outcomes,mci_event,bool,bool,,Event occurred during follow-up
+outcomes,dementia_event,bool,bool,,Event occurred during follow-up
+outcomes,moderate_event,bool,bool,,Event occurred during follow-up
+outcomes,death_event,bool,bool,,Event occurred during follow-up
+outcomes,age_mci,float,years,50 to 89.0833,"Age at event, or age at end of follow-up if no event; the flag says which"
+outcomes,age_dementia,float,years,50.25 to 100,As above
+outcomes,age_moderate,float,years,50.25 to 100,As above
+outcomes,age_death_or_censor,float,years,50.75 to 100,Age at death or end of follow-up
+outcomes,dementia_free_years,float,years,0 to 25,Years of life without dementia from entry
+outcomes,cdr_sb_last,float,0-18,0 to 18,Last observed CDR-SB
+outcomes,ever_treated,bool,bool,,Received any therapy
+truth/subject_truth,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+truth/subject_truth,subtype_true,int8,1-5,1 to 5,True molecular subtype
+truth/subject_truth,amyloid_onset_age,float,years,25 to 899.975,Age at which amyloid crosses the positivity threshold in the control
+truth/subject_truth,neurodegeneration_rate,float,model units,0.000363728 to 1.10662,Person-specific damage rate
+truth/subject_truth,cognitive_reserve,float,model units,0.05 to 1.30501,Person-specific cognitive reserve
+truth/subject_truth,tau_rate_multiplier,float,ratio,0.500166 to 1.4656,Person tau rate relative to the mean
+truth/theta_by_subject,scenario_id,string,,,Scenario identifier S00 to S26
+truth/theta_by_subject,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+truth/theta_by_subject,theta_A_pre_i,float,0-1,0 to 1,Person-level amyloid share before symptoms
+truth/theta_by_subject,theta_A_sym_i,float,0-1,0 to 1,Person-level amyloid share at symptomatic stage
+truth/theta_by_subject,theta_I_i,float,0-1,0 to 1,Person-level inflammation share
+truth/theta_by_subject,theta_G_i,float,0-1,0 to 1,Person-level clearance share
+truth/truth_quarterly,scenario_id,string,,,Scenario identifier S00 to S26
+truth/truth_quarterly,subject_id,int32,,1 to 10000,"Person number, shared by all tables and all scenarios"
+truth/truth_quarterly,quarter,int16,0-100,0 to 100,Quarter from entry
+truth/truth_quarterly,age,float,years,50 to 100,Age at the visit or time point
+truth/truth_quarterly,amyloid_cl,float,CL,2.17151e-05 to 157.529,True amyloid
+truth/truth_quarterly,tau_burden,float,0-1,0.00175953 to 0.999999,True tau burden
+truth/truth_quarterly,inflammation,float,0-1,0.000335353 to 1,True inflammation
+truth/truth_quarterly,clearance,float,relative,1 to 1,True clearance
+truth/truth_quarterly,neurodegeneration,float,model units,2.92928e-05 to 15.2089,True accumulated damage
+truth/truth_quarterly,cdr_sb_true,float,0-18,0 to 18,True CDR-SB without noise or rounding
+truth/truth_quarterly,stage_true,category,as clinical_stage,,True stage
+truth/truth_quarterly,m_amyloid,float,0-1,1 to 1,Therapy shift of the amyloid mechanism relative to the same person untreated; 1 means no shift
+truth/truth_quarterly,m_inflammation,float,0-1,1 to 1,"Same, inflammation"
+truth/truth_quarterly,m_clearance,float,0-1,1 to 1,"Same, clearance"
+truth/truth_quarterly,progression_factor,float,0-1,1 to 1,Multiplier of the damage rate
+truth/truth_quarterly,on_therapy,bool,bool,,On therapy at this quarter
