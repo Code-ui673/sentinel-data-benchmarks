@@ -17,6 +17,7 @@ Each dataset lives in its own folder: a free row-level sample, the exact validat
 | Coverage Priority & Recovery Timeline | [`coverage-priority-recovery-timeline/`](coverage-priority-recovery-timeline/) | [sentineldata.com.ua/dataset/coverage-priority-recovery-timeline](https://sentineldata.com.ua/dataset/coverage-priority-recovery-timeline) |
 | Patient Liability & Financial Assistance Ledger | [`patient-liability-financial-assistance-ledger/`](patient-liability-financial-assistance-ledger/) | [sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger](https://sentineldata.com.ua/dataset/patient-liability-financial-assistance-ledger) |
 | Alzheimer's Counterfactual Twin Cohort | [`alzheimers-counterfactual-twin-cohort/`](alzheimers-counterfactual-twin-cohort/) | [sentineldata.com.ua/dataset/alzheimers-counterfactual-twin-cohort](https://sentineldata.com.ua/dataset/alzheimers-counterfactual-twin-cohort) |
+| Hospital Antibiotic Resistance Counterfactual Cohort | [`hospital-antibiotic-resistance-counterfactual-cohort/`](hospital-antibiotic-resistance-counterfactual-cohort/) | [sentineldata.com.ua/dataset/hospital-antibiotic-resistance-counterfactual-cohort](https://sentineldata.com.ua/dataset/hospital-antibiotic-resistance-counterfactual-cohort) |
 
 ## Status
 

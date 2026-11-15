@@ -1,0 +1,44 @@
+How to read this dataset
+========================
+
+Every table is a folder of Parquet files. The folders scenario_id=S00, scenario_id=S01 and so on hold one scenario each.
+Tables under observed/ are what a hospital could see. Tables under truth/ are what only the simulation knows.
+Train on observed/. Evaluate against truth/. A model trained on truth/ measures nothing a hospital can use.
+
+Python (pandas and pyarrow):
+
+    import pandas as pd
+    keys = ["scenario_id", "world_id", "subject_id"]
+    adm = pd.read_parquet("observed/admissions/scenario_id=S13/part-0.parquet")
+    out = pd.read_parquet("observed/outcomes/scenario_id=S13/part-0.parquet")
+    ev  = pd.read_parquet("truth/events_truth/scenario_id=S13/part-0.parquet")
+    df = adm.merge(out, on=keys).merge(ev, on=keys)
+
+All scenarios of one table at once (the partition column is also stored inside each file):
+
+    import glob
+    df = pd.concat(pd.read_parquet(f) for f in sorted(glob.glob("observed/outcomes/*/part-0.parquet")))
+
+Trajectories are read one world of one scenario at a time (the sample holds scenarios S10, S13 and S16). Read one world of one scenario at a time:
+
+    tr = pd.read_parquet("truth/trajectory_truth/scenario_id=S13/world_id=W1.parquet")
+
+The patient table of the truth layer is one file for all scenarios:
+
+    st = pd.read_parquet("truth/subject_truth/subject_truth.parquet")
+
+R (arrow):
+
+    library(arrow)
+    out <- read_parquet("observed/outcomes/scenario_id=S13/part-0.parquet")
+
+Correct comparisons
+-------------------
+Compare worlds inside one scenario and one patient (paired). The same latent patient lives through W0 to W5 with the same random numbers.
+Do not compare scenarios as if they were data of one world: a scenario is an assumption about what drives acquisition, not a measurement.
+World W0 is identical in all 26 scenarios, bit for bit.
+
+Keys
+----
+scenario_id (S00 to S25), world_id (W0 to W5), subject_id (0 to 9999). subject_id means the same patient everywhere.
+manifest.csv lists every file with its size and SHA-256.

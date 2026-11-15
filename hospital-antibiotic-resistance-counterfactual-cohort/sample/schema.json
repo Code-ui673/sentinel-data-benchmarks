@@ -1,0 +1,115 @@
+{
+ "tables": {
+  "observed/admissions": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "age": "int16",
+   "sex": "str",
+   "serum_creatinine": "float32",
+   "crcl_estimated": "float32",
+   "dose_tier": "float32",
+   "course_days_planned": "int16",
+   "decolonisation_given": "bool",
+   "vaccine_given": "bool",
+   "prior_antibiotic_90d": "bool",
+   "invasive_device": "bool",
+   "transfer_from_other_unit": "bool",
+   "surgery_past_year": "bool"
+  },
+  "observed/cultures": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "culture_day": "float32",
+   "organism": "str",
+   "resistant_phenotype": "bool",
+   "mic_reported": "float32",
+   "result_available_day": "float32"
+  },
+  "observed/dosing": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "day": "int16",
+   "dose_mg": "float32",
+   "fraction_of_day_on": "float32",
+   "skipped": "bool"
+  },
+  "observed/labs": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "lab_day": "float32",
+   "serum_creatinine": "float32"
+  },
+  "observed/outcomes": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "carrier_day14": "bool",
+   "carrier_known_day14": "bool",
+   "carrier_ever_observed": "bool",
+   "first_detection_day": "float32",
+   "died_in_hospital": "bool",
+   "died_day90": "bool",
+   "antibiotic_days_given": "float32"
+  },
+  "observed/ward_census": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "day": "int64",
+   "patients_in_cohort": "int64",
+   "carrier_share_observed": "float64",
+   "antibiotic_mg_total": "float64"
+  },
+  "truth/events_truth": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "acquisition_day": "float32",
+   "colonised_admission_true": "bool",
+   "auc24_true": "float32",
+   "inadequate_true": "bool",
+   "exposure_days_above_mic": "float32",
+   "burden_r_day30": "float32",
+   "burden_s_day30": "float32",
+   "mortality_risk_true": "float32"
+  },
+  "truth/theta_by_scenario": {
+   "scenario_id": "str",
+   "theta_E": "float64",
+   "theta_T": "float64",
+   "theta_U": "float64",
+   "world_id": "str",
+   "m_E": "float64",
+   "m_T": "float64",
+   "m_U": "float64",
+   "bracket": "float64"
+  },
+  "truth/trajectory_truth": {
+   "scenario_id": "str",
+   "world_id": "str",
+   "subject_id": "int32",
+   "day": "float32",
+   "conc_mg_l": "float32",
+   "burden_s": "float32",
+   "burden_r": "float32"
+  },
+  "truth/subject_truth": {
+   "subject_id": "int32",
+   "crcl_true": "float32",
+   "colonised_admission_true": "bool",
+   "acq_multiplier_true": "float32",
+   "frailty_true": "float32",
+   "crcl_estimate_error_factor": "float32",
+   "vaccine_preventable_true": "bool",
+   "mic_s_true": "float32",
+   "mic_r_true": "float32",
+   "u_acq": "float32",
+   "u_death": "float32",
+   "u_inflow": "float32"
+  }
+ },
+ "layout": "hive partitioned by scenario_id (folder scenario_id=Sxx); trajectory_truth additionally one file per world; subject_truth is a single file"
+}

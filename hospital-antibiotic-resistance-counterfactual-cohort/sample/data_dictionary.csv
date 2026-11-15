@@ -1,0 +1,91 @@
+table,column,type,unit,range_in_file_sampled,description
+observed/admissions,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/admissions,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/admissions,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+observed/admissions,age,int16,years,18 to 100,Age at admission
+observed/admissions,sex,str,-,F/M,"Recorded sex, F or M"
+observed/admissions,serum_creatinine,float32,mg/dL,0.07592 to 13.98,Serum creatinine derived from the clearance estimate by the Cockcroft-Gault equation with a 70 kg reference weight
+observed/admissions,crcl_estimated,float32,mL/min,6.887 to 772.8,"Creatinine clearance estimate on which the dose was actually chosen: the true value times one minus the bias, scattered by a log-normal error"
+observed/admissions,dose_tier,float32,-,0.5 to 1.667,Daily dose as a multiple of the highest label tier (12 g piperacillin per day = 1.0)
+observed/admissions,course_days_planned,int16,-,7 to 14,Planned course length in this world
+observed/admissions,decolonisation_given,bool,-,false/true,Intestinal decolonisation applied (W2)
+observed/admissions,vaccine_given,bool,-,false/true,Vaccine applied to the ward (W5)
+observed/admissions,prior_antibiotic_90d,bool,-,false/true,Antibiotic course in the 90 days before admission
+observed/admissions,invasive_device,bool,-,false/true,Central line or urinary catheter in the first days
+observed/admissions,transfer_from_other_unit,bool,-,false/true,Admitted by transfer from another unit
+observed/admissions,surgery_past_year,bool,-,false/true,Surgery in the year before admission
+observed/cultures,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/cultures,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/cultures,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+observed/cultures,culture_day,float32,days,0 to 28,Day of the surveillance culture counted from admission
+observed/cultures,organism,str,-,gram_negative_bacillus,Pathogen of the cohort
+observed/cultures,resistant_phenotype,bool,-,false/true,Resistant phenotype found in the culture by selective screening
+observed/cultures,mic_reported,float32,mg/L,8 to 32,"Reported MIC in mg/L, rounded up to the two-fold dilution ladder"
+observed/cultures,result_available_day,float32,days,0.3125 to 29.83,"Day on which the result reaches the clinician (culture day plus 44 h in W0, 7.5 h in W1)"
+observed/dosing,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/dosing,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/dosing,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+observed/dosing,day,int16,days,0 to 13,"Day from admission (dosing) or recording day (trajectories, ward census)"
+observed/dosing,dose_mg,float32,mg,437.5 to 2e+04,Piperacillin given on that day in mg
+observed/dosing,fraction_of_day_on,float32,-,0.03646 to 1,Fraction of the day during which the drug ran (below 1 only in W3)
+observed/dosing,skipped,bool,-,false/true,Day without any drug
+observed/labs,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/labs,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/labs,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+observed/labs,lab_day,float32,days,0 to 14,Day of the laboratory measurement
+observed/labs,serum_creatinine,float32,mg/dL,0.07592 to 13.98,Serum creatinine derived from the clearance estimate by the Cockcroft-Gault equation with a 70 kg reference weight
+observed/outcomes,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/outcomes,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/outcomes,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+observed/outcomes,carrier_day14,bool,-,false/true,New resistant culture within 14 days (not positive at admission)
+observed/outcomes,carrier_known_day14,bool,-,false/true,"Same, restricted to results available to the clinician by day 14"
+observed/outcomes,carrier_ever_observed,bool,-,false/true,New resistant culture at any scheduled day up to 28
+observed/outcomes,first_detection_day,float32,days,2 to 28,First scheduled day with a new resistant culture; empty if none
+observed/outcomes,died_in_hospital,bool,-,false/true,Death in hospital
+observed/outcomes,died_day90,bool,-,false/true,Death within 90 days
+observed/outcomes,antibiotic_days_given,float32,days,0.6146 to 14,Days of drug actually running
+observed/ward_census,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+observed/ward_census,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+observed/ward_census,day,int64,days,0 to 30,"Day from admission (dosing) or recording day (trajectories, ward census)"
+observed/ward_census,patients_in_cohort,int64,-,1e+04 to 1e+04,Number of patients in the cohort
+observed/ward_census,carrier_share_observed,float64,-,0.1179 to 0.4902,Share of patients whose latest culture up to that day is resistant
+observed/ward_census,antibiotic_mg_total,float64,mg,0 to 1.313e+08,"Piperacillin given on that day to the whole cohort, mg"
+truth/events_truth,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+truth/events_truth,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+truth/events_truth,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+truth/events_truth,acquisition_day,float32,days,0.001604 to 29.99,True day of acquisition of the resistant organism (not the day of detection); empty if none within 30 days
+truth/events_truth,colonised_admission_true,bool,-,false/true,Truly colonised with the resistant organism at admission
+truth/events_truth,auc24_true,float32,mg*h/L,75.48 to 9573,"24 h drug exposure, mg*h/L"
+truth/events_truth,inadequate_true,bool,-,false/true,Exposure below the unbound target
+truth/events_truth,exposure_days_above_mic,float32,days,0 to 16.98,Days with free concentration above the susceptible MIC
+truth/events_truth,burden_r_day30,float32,-,0 to 1,"Resistant burden at day 30, fraction of niche capacity"
+truth/events_truth,burden_s_day30,float32,-,1.121e-44 to 1,"Susceptible burden at day 30, fraction of niche capacity"
+truth/events_truth,mortality_risk_true,float32,-,0.1088 to 0.2455,Model probability of death within 90 days used to draw the outcome
+truth/theta_by_scenario,scenario_id,str,-,S20,Hypothesis scenario S00 to S25 (a point of the theta grid)
+truth/theta_by_scenario,theta_E,float64,-,0.4 to 0.4,Share of acquisition attributed to antibiotic exposure
+truth/theta_by_scenario,theta_T,float64,-,0 to 0,Share attributed to transmission and reservoir
+truth/theta_by_scenario,theta_U,float64,-,0.2 to 0.2,Share attributed to inadequate exposure
+truth/theta_by_scenario,world_id,str,-,W0/W1/W2/W3/W4/W5,Policy world W0 to W5
+truth/theta_by_scenario,m_E,float64,-,0.5 to 1,Residual exposure fraction in this world
+truth/theta_by_scenario,m_T,float64,-,0.07824 to 1,Residual transmission fraction
+truth/theta_by_scenario,m_U,float64,-,0.7605 to 1,Residual inadequacy fraction
+truth/theta_by_scenario,bracket,float64,-,0.8 to 1,"Attribution bracket, multiplier of the control hazard"
+truth/trajectory_truth,scenario_id,str,-,S00,Hypothesis scenario S00 to S25 (a point of the theta grid)
+truth/trajectory_truth,world_id,str,-,W0,Policy world W0 to W5
+truth/trajectory_truth,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+truth/trajectory_truth,day,float32,days,0.25 to 30,"Day from admission (dosing) or recording day (trajectories, ward census)"
+truth/trajectory_truth,conc_mg_l,float32,mg/L,0 to 398.9,"Total drug concentration, mg/L"
+truth/trajectory_truth,burden_s,float32,-,1.121e-44 to 1,"Susceptible burden, fraction of niche capacity"
+truth/trajectory_truth,burden_r,float32,-,0 to 1,"Resistant burden, fraction of niche capacity"
+truth/subject_truth,subject_id,int32,-,0 to 9999,"Patient, the same latent patient in every world and scenario"
+truth/subject_truth,crcl_true,float32,mL/min,16.67 to 300,"True creatinine clearance, mL/min"
+truth/subject_truth,colonised_admission_true,bool,-,false/true,Truly colonised with the resistant organism at admission
+truth/subject_truth,acq_multiplier_true,float32,-,0.03092 to 37.16,"True multiplier of the acquisition hazard (mean 1 over the cohort), product of the indicator multipliers and the frailty"
+truth/subject_truth,frailty_true,float32,-,-2.014 to 1.991,"True unobserved frailty term, natural-log scale"
+truth/subject_truth,crcl_estimate_error_factor,float32,-,0.2223 to 4.374,Ratio of the clearance estimate to the true clearance
+truth/subject_truth,vaccine_preventable_true,bool,-,false/true,Organism belongs to the vaccine-covered share
+truth/subject_truth,mic_s_true,float32,mg/L,8 to 8,"MIC of the susceptible strain, mg/L"
+truth/subject_truth,mic_r_true,float32,mg/L,32 to 32,"MIC of the resistant strain, mg/L"
+truth/subject_truth,u_acq,float32,-,8.386e-05 to 1,Common random number for acquisition
+truth/subject_truth,u_death,float32,-,0.0003734 to 0.9998,Common random number for death
+truth/subject_truth,u_inflow,float32,-,1.431e-06 to 0.9998,Common random number for colonisation at admission
