@@ -1,0 +1,78 @@
+table,column,dtype,rows,null_count,description
+observed/outcomes.parquet,patient_id,str,200,0,"opaque child identifier, the join key of every table"
+observed/outcomes.parquet,follow_up_months,int16,200,0,observed follow-up: to death or to the 20-year administrative end
+observed/outcomes.parquet,died,int8,200,0,1 if the child died inside the follow-up
+observed/outcomes.parquet,death_month,float64,200,52,age at death in whole months; empty if alive at the end
+observed/patients.parquet,patient_id,str,200,0,"opaque child identifier, the join key of every table"
+observed/patients.parquet,sex,str,200,0,F or M
+observed/patients.parquet,diagnosis_age_months,int16,200,0,age at the diagnosis visit; the first row of visits
+observed/patients.parquet,index_age_months,int16,200,0,reference age: the age at which lonafarnib starts in the index-age arms and the anchor of the follow-up biopsy
+observed/patients.parquet,treatment,str,200,0,"treatment the child actually received: none, lonafarnib, lonafarnib+everolimus or progerin_lowering"
+observed/patients.parquet,treatment_start_months,float64,200,63,age at which that treatment started; empty for untreated children
+observed/plasma_panel.parquet,patient_id,str,2351,0,"opaque child identifier, the join key of every table"
+observed/plasma_panel.parquet,age_months,int16,2351,0,age at the record in months
+observed/plasma_panel.parquet,plasma_ecm_z,float64,2351,0,"plasma protein module score, ecm, z-units"
+observed/plasma_panel.parquet,plasma_growth_factor_response_z,float64,2351,0,"plasma protein module score, growth factor response, z-units"
+observed/plasma_panel.parquet,plasma_calcium_binding_z,float64,2351,0,"plasma protein module score, calcium binding, z-units"
+observed/plasma_panel.parquet,plasma_cardiovascular_proteins_z,float64,2351,0,"plasma protein module score, cardiovascular proteins, z-units"
+observed/plasma_panel.parquet,plasma_global_downregulation_z,float64,2351,0,"plasma protein module score, global downregulation, z-units"
+observed/skin_biopsies.parquet,patient_id,str,219,0,"opaque child identifier, the join key of every table"
+observed/skin_biopsies.parquet,age_months,int16,219,0,age at the record in months
+observed/skin_biopsies.parquet,kind,str,219,0,baseline (first visit) or followup (six months after the index age)
+observed/skin_biopsies.parquet,progerin_fmol_per_100ug,float64,219,0,"farnesylated progerin by mass spectrometry, fmol per 100 ug protein"
+observed/skin_biopsies.parquet,lamin_a_fmol_per_100ug,float64,219,0,"lamin A by mass spectrometry, fmol per 100 ug protein"
+observed/skin_biopsies.parquet,fibroblast_dna_damage_z,float64,219,0,"fibroblast transcript module score, dna damage, z-units, skin biopsy"
+observed/skin_biopsies.parquet,fibroblast_senescence_sasp_z,float64,219,0,"fibroblast transcript module score, senescence sasp, z-units, skin biopsy"
+observed/skin_biopsies.parquet,fibroblast_ecm_z,float64,219,0,"fibroblast transcript module score, ecm, z-units, skin biopsy"
+observed/skin_biopsies.parquet,fibroblast_osteogenic_calcification_z,float64,219,0,"fibroblast transcript module score, osteogenic calcification, z-units, skin biopsy"
+observed/skin_biopsies.parquet,fibroblast_vsmc_contractile_z,float64,219,0,"fibroblast transcript module score, vsmc contractile, z-units, skin biopsy"
+observed/skin_biopsies.parquet,fibroblast_proliferation_z,float64,219,0,"fibroblast transcript module score, proliferation, z-units, skin biopsy"
+observed/visits.parquet,patient_id,str,4595,0,"opaque child identifier, the join key of every table"
+observed/visits.parquet,visit_index,int16,4595,0,"0 for the diagnosis visit, then one per six months"
+observed/visits.parquet,age_months,int16,4595,0,age at the record in months
+observed/visits.parquet,on_lonafarnib,bool,4595,0,1 if lonafarnib was being taken before this record
+observed/visits.parquet,on_everolimus,bool,4595,0,1 if everolimus was being taken
+observed/visits.parquet,weight_kg,float64,4595,0,measured weight
+observed/visits.parquet,height_cm,float64,4595,0,measured height
+observed/visits.parquet,cfpwv_ms,float64,4595,2244,"carotid-femoral pulse wave velocity, m/s; every second visit"
+observed/visits.parquet,carotid_beta,float64,4595,2244,local carotid stiffness index beta; every second visit
+observed/visits.parquet,abi_abnormal,Int8,4595,2244,1 if the ankle-brachial index is abnormal; every second visit
+observed/visits.parquet,lvdd,Int8,4595,2244,1 if left-ventricular diastolic dysfunction is present; every second visit
+truth/latent_states.parquet,patient_id,str,27930,0,"opaque child identifier, the join key of every table"
+truth/latent_states.parquet,world,str,27930,0,"W0..W5, the counterfactual world"
+truth/latent_states.parquet,age_months,int16,27930,0,age at the record in months
+truth/latent_states.parquet,progerin_pool,float32,27930,0,"normalised progerin pool, 1 = average untreated child"
+truth/latent_states.parquet,progerin_farnesylated,float32,27930,0,farnesylated share of the pool after lonafarnib
+truth/latent_states.parquet,toxicity,float32,27930,0,progerin toxicity after lonafarnib and everolimus
+truth/latent_states.parquet,vsmc_fraction,float32,27930,0,"surviving vascular smooth muscle fraction, 1 = intact; never recovers"
+truth/latent_states.parquet,fibrosis_reversible,float32,27930,0,functional fibrosis; regresses when toxicity or lonafarnib allow
+truth/latent_states.parquet,matrix_stiffening,float32,27930,0,"irreversible arterial matrix stiffening, 0-1"
+truth/latent_states.parquet,damage_index,float32,27930,0,"damage index from smooth muscle loss and fibrosis, drives the death hazard"
+truth/latent_states.parquet,stiffness_index,float32,27930,0,arterial stiffness from smooth muscle loss and matrix stiffening
+truth/latent_states.parquet,cfpwv_true_ms,float32,27930,0,true carotid-femoral PWV before measurement noise
+truth/latent_states.parquet,carotid_beta_true,float32,27930,0,true local carotid beta before measurement noise
+truth/latent_states.parquet,abi_abnormal_prob,float32,27930,0,probability that the ABI reads abnormal
+truth/latent_states.parquet,lvdd_prob,float32,27930,0,probability of diastolic dysfunction
+truth/latent_states.parquet,aorta_vsmc_contractile_z,float32,27930,0,"aortic smooth muscle contractile module score (truth only, design scale)"
+truth/latent_states.parquet,aorta_ecm_z,float32,27930,0,aortic matrix module score (truth only)
+truth/latent_states.parquet,aorta_endothelial_inflammation_z,float32,27930,0,aortic endothelial inflammation module score (truth only)
+truth/latent_states.parquet,on_lonafarnib,bool,27930,0,1 if lonafarnib was being taken before this record
+truth/latent_states.parquet,on_everolimus,bool,27930,0,1 if everolimus was being taken
+truth/latent_states.parquet,progerin_lowering_active,bool,27930,0,
+truth/patients.parquet,patient_id,str,200,0,"opaque child identifier, the join key of every table"
+truth/patients.parquet,sex,str,200,0,F or M
+truth/patients.parquet,diagnosis_age_months,int16,200,0,age at the diagnosis visit; the first row of visits
+truth/patients.parquet,index_age_months,int16,200,0,reference age: the age at which lonafarnib starts in the index-age arms and the anchor of the follow-up biopsy
+truth/patients.parquet,arm,str,200,0,"world the child actually lived in: W0 untreated, W1 lonafarnib at the index age, W2 lonafarnib from diagnosis, W3 lonafarnib plus everolimus at the index age, W4 progerin lowering from diagnosis, W5 progerin lowering at 12 years"
+truth/patients.parquet,progerin_production_multiplier,float32,200,0,the child's progerin production relative to the average (log-normal)
+truth/patients.parquet,tolerance_unit,float32,200,0,"the child's own random tolerance to cumulative death hazard, uniform 0-1; shared by all six worlds"
+truth/patients.parquet,lowering_efficiency,float32,200,0,fraction by which progerin lowering would cut production in this child
+truth/patients.parquet,weight_response_class,str,200,0,"weight gain response to lonafarnib: gain, stable or loss"
+truth/patients.parquet,followup_noise_z,float32,200,0,standard normal draw that sets the child's follow-up length in the matched-design emulation
+truth/world_outcomes.parquet,patient_id,str,1200,0,"opaque child identifier, the join key of every table"
+truth/world_outcomes.parquet,world,str,1200,0,"W0..W5, the counterfactual world"
+truth/world_outcomes.parquet,death_month,float64,1200,56,age at death in whole months; empty if alive at the end
+truth/world_outcomes.parquet,beyond_horizon,bool,1200,0,true if the child survives past the 40-year horizon in that world
+truth/world_outcomes.parquet,lonafarnib_start_month,float64,1200,600,month of lonafarnib start in that world; empty if none
+truth/world_outcomes.parquet,everolimus_start_month,float64,1200,1000,month of everolimus start in that world
+truth/world_outcomes.parquet,lowering_start_month,float64,1200,800,month progerin lowering starts in that world

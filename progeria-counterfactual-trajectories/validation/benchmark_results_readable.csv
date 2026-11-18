@@ -1,0 +1,9 @@
+kind,label,value,n,lo,hi
+summary,"restricted mean survival in months, 60 months from the index age, treated minus untreated: observed arms",0.6003256944081414,3919,,
+summary,same quantity from the counterfactual truth (every child in both worlds),1.2037866802755806,3919,,
+summary,"farnesylated progerin, skin biopsy 6 months after the index age: AUC for lonafarnib at the index age",0.9761852817109542,3410,0.9714812917399566,0.9798495596278162
+summary,carotid-femoral PWV at the visit nearest to 6 months after the index age: AUC for lonafarnib at the index age,0.5599765704273137,5769,0.5460447660835323,0.5733660160744872
+summary,"death within 24 months, age only",0.5508175434694721,112975,0.5459878534857795,0.5548777156698981
+summary,"death within 24 months, age + carotid-femoral PWV",0.5632890888758615,112975,0.5584939522844893,0.5677849030929885
+summary,"death within 24 months, age + PWV + weight + treatment flag",0.5658475637131674,112975,0.561323983111328,0.5706911054177538
+summary,"death within 24 months, truth predictor: damage index (upper reference)",0.5817218472437125,112975,0.5774863819268276,0.5873363102437158

@@ -1,0 +1,11 @@
+Working with the Parquet files
+
+Every table is an Apache Parquet file. Parquet keeps column types, compresses well and is read directly by
+pandas, Polars, DuckDB, Apache Spark and R.
+
+Python (pandas):  import pandas as pd; df = pd.read_parquet("observed/visits.parquet")
+Python (DuckDB):  import duckdb; duckdb.sql("select treatment, count(*) from 'observed/patients.parquet' group by 1")
+R (arrow):        library(arrow); df <- read_parquet("observed/visits.parquet")
+
+The observed/ tables are what a clinic and a laboratory would record for the world each child lived in. The truth/ tables
+hold every child in all six worlds. Join on patient_id; truth/latent_states and truth/world_outcomes add the key `world`.
