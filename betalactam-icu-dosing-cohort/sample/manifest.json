@@ -1,0 +1,86 @@
+{
+ "release": "1.1",
+ "seed": 20261119,
+ "files": [
+  {
+   "file": "README_parquet.txt",
+   "bytes": 880,
+   "sha256": "613862d8bc5008b59d6714fb7c7009e948716445cef073c6d7a07e9a8396e278"
+  },
+  {
+   "file": "constants_register.csv",
+   "bytes": 32520,
+   "sha256": "d8fd2aba6e7a2988acbf702547251ee5c264d37c74200582de4227f330969cf3"
+  },
+  {
+   "file": "model_registry.parquet",
+   "bytes": 4672,
+   "sha256": "a900cf99ec223db2cc7b220b08182976bd938129492e2dd78be0badbfce0ad49",
+   "rows": 8
+  },
+  {
+   "file": "pathogen_mic.parquet",
+   "bytes": 5302,
+   "sha256": "2dff13f07920fb43f89ee39de67356b8c87134a3025495e6c97116d769a25d67",
+   "rows": 133
+  },
+  {
+   "file": "patients_observed.parquet",
+   "bytes": 36797,
+   "sha256": "b40914c48dd73696dce2db179303a1759ec580e8bb02fcfff8ee7a33e0dd51cd",
+   "rows": 400
+  },
+  {
+   "file": "patients_truth.parquet",
+   "bytes": 33129,
+   "sha256": "c65fab2243cfc1beb53d203210d8faaa897fad9e497e0b72c5e7dbf9605e7260",
+   "rows": 400
+  },
+  {
+   "file": "pk_profiles.parquet",
+   "bytes": 6818002,
+   "sha256": "652a40d65676285773d802ab720259ce10deee599199758c2ef19213a5c8a891",
+   "rows": 866000
+  },
+  {
+   "file": "references.csv",
+   "bytes": 5500,
+   "sha256": "04c1a29f397ceb055b0ff1003d41421e026eee8f4cc170fc313ab670e4ff7cde"
+  },
+  {
+   "file": "regimen_metrics.parquet",
+   "bytes": 96013,
+   "sha256": "0d8b98d3167e3c614a4a31cff6f250b3a2ae7de51ebfe24116894fcdd5f24c8b",
+   "rows": 2000
+  },
+  {
+   "file": "regimens.parquet",
+   "bytes": 34584,
+   "sha256": "ebcf4515b32c45cb511000abb58c3f8706031d6f76c21e217d2759570204cba4",
+   "rows": 2000
+  },
+  {
+   "file": "schema.json",
+   "bytes": 13713,
+   "sha256": "cb16161cb0fb67efe8af25ee8411943040c1da4c052aef11cce2d85ad50ae501"
+  },
+  {
+   "file": "tdm_adjustments.parquet",
+   "bytes": 17881,
+   "sha256": "67d51d90fbfbf21b50760c39b92f5104e83a0c822f5bedcfe6e4e3790eeffee4",
+   "rows": 400
+  },
+  {
+   "file": "tdm_predictions.parquet",
+   "bytes": 15025,
+   "sha256": "c0a45fa6600a644cf5489ce047455c5b55c8deeb6daefc1ea3903ad1aea47fa9",
+   "rows": 1200
+  },
+  {
+   "file": "tdm_samples.parquet",
+   "bytes": 11166,
+   "sha256": "508f3ba55667646f6584c3ebba561530f1e547c7e9a8fc42cd2d1589a1c27a7c",
+   "rows": 800
+  }
+ ]
+}

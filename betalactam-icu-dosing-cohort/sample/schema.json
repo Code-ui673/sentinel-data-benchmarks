@@ -1,0 +1,557 @@
+{
+ "patients_observed": {
+  "rows": "20,000",
+  "description": "What a clinician sees at the bedside: demographics, renal estimates, organ support, pathogen and measured MIC. No hidden truth.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Unique patient key shared by all tables."
+   },
+   {
+    "name": "drug",
+    "type": "string",
+    "description": "meropenem or piperacillin."
+   },
+   {
+    "name": "age_y",
+    "type": "float64",
+    "description": "Age in years (adults)."
+   },
+   {
+    "name": "sex",
+    "type": "string",
+    "description": "M or F."
+   },
+   {
+    "name": "weight_kg",
+    "type": "float64",
+    "description": "Total body weight, kg."
+   },
+   {
+    "name": "height_cm",
+    "type": "float64",
+    "description": "Height, cm."
+   },
+   {
+    "name": "bmi_kg_m2",
+    "type": "float64",
+    "description": "Body mass index."
+   },
+   {
+    "name": "bsa_m2",
+    "type": "float64",
+    "description": "Body surface area, m2."
+   },
+   {
+    "name": "albumin_g_L",
+    "type": "float64",
+    "description": "Serum albumin, g/L."
+   },
+   {
+    "name": "crcl_cg_est_ml_min_173",
+    "type": "float64",
+    "description": "Creatinine clearance estimated by Cockcroft-Gault, mL/min/1.73 m2. Carries the formula error seen in augmented renal clearance."
+   },
+   {
+    "name": "egfr_ckdepi_est_ml_min_173",
+    "type": "float64",
+    "description": "eGFR by CKD-EPI, mL/min/1.73 m2, same error structure."
+   },
+   {
+    "name": "crrt_flag",
+    "type": "bool",
+    "description": "Continuous renal replacement therapy during the horizon."
+   },
+   {
+    "name": "crrt_effluent_flow_L_h",
+    "type": "float64",
+    "description": "Effluent flow, L/h (0 when no CRRT)."
+   },
+   {
+    "name": "ecmo_flag",
+    "type": "bool",
+    "description": "ECMO support."
+   },
+   {
+    "name": "burn_flag",
+    "type": "bool",
+    "description": "Burn patient."
+   },
+   {
+    "name": "tbsa_pct",
+    "type": "float64",
+    "description": "Burned body surface, percent (0 when no burn)."
+   },
+   {
+    "name": "surgery_24h_flag",
+    "type": "bool",
+    "description": "Surgery within 24 h."
+   },
+   {
+    "name": "pathogen",
+    "type": "string",
+    "description": "Species of the treated infection."
+   },
+   {
+    "name": "mic_mg_L",
+    "type": "float64",
+    "description": "Measured MIC, mg/L, on the two-fold dilution ladder."
+   }
+  ]
+ },
+ "patients_truth": {
+  "rows": "20,000",
+  "description": "Hidden truth behind each patient: true renal function, the pharmacokinetic model that governs the patient, individual parameters and random effects.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "model_id",
+    "type": "string",
+    "description": "True pharmacokinetic model of the patient (M1-M4 meropenem, P1-P4 piperacillin); see the model registry."
+   },
+   {
+    "name": "true_crcl_urinary_ml_min_173",
+    "type": "float64",
+    "description": "True urinary creatinine clearance, mL/min/1.73 m2."
+   },
+   {
+    "name": "arc_true",
+    "type": "bool",
+    "description": "Augmented renal clearance by the true clearance (threshold 130)."
+   },
+   {
+    "name": "arc_prevalence_stratum",
+    "type": "string",
+    "description": "Prevalence stratum used for the patient (low, central, high)."
+   },
+   {
+    "name": "cl_L_h",
+    "type": "float64",
+    "description": "Individual clearance, L/h."
+   },
+   {
+    "name": "v1_L",
+    "type": "float64",
+    "description": "Central volume, L."
+   },
+   {
+    "name": "q_L_h",
+    "type": "float64",
+    "description": "Inter-compartmental clearance, L/h (0 for one-compartment models)."
+   },
+   {
+    "name": "v2_L",
+    "type": "float64",
+    "description": "Peripheral volume, L."
+   },
+   {
+    "name": "vmax_mg_h",
+    "type": "float64",
+    "description": "Maximal saturable elimination rate, mg/h (0 when linear)."
+   },
+   {
+    "name": "km_mg_L",
+    "type": "float64",
+    "description": "Michaelis constant, mg/L (0 when linear)."
+   },
+   {
+    "name": "crrt_clearance_L_h",
+    "type": "float64",
+    "description": "Additional clearance by CRRT, L/h."
+   },
+   {
+    "name": "fu",
+    "type": "float64",
+    "description": "True unbound fraction."
+   },
+   {
+    "name": "fu_axis_end",
+    "type": "string",
+    "description": "Which end of the published unbound-fraction range the patient was drawn from (reference or measured)."
+   },
+   {
+    "name": "structure",
+    "type": "string",
+    "description": "Compartment structure: 2c, 1c or 2c_mm."
+   },
+   {
+    "name": "eta_1",
+    "type": "float64",
+    "description": "Random effect on clearance (log scale)."
+   },
+   {
+    "name": "eta_2",
+    "type": "float64",
+    "description": "Random effect on central volume (log scale)."
+   },
+   {
+    "name": "eta_3",
+    "type": "float64",
+    "description": "Random effect on the third parameter (log scale, 0 if unused)."
+   }
+  ]
+ },
+ "regimens": {
+  "rows": "100,000",
+  "description": "Five regimens per patient. Each regimen is a list of constant-rate infusion segments over 72 h.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "regimen",
+    "type": "string",
+    "description": "A label bolus, B extended infusion, C continuous infusion, D continuous with drug monitoring and Bayesian adjustment, E oracle with true parameters."
+   },
+   {
+    "name": "n_segments",
+    "type": "int64",
+    "description": "Number of segments with non-zero rate."
+   },
+   {
+    "name": "seg_start_h",
+    "type": "list<float64>",
+    "description": "Segment start times, h."
+   },
+   {
+    "name": "seg_dur_h",
+    "type": "list<float64>",
+    "description": "Segment durations, h."
+   },
+   {
+    "name": "seg_rate_mg_h",
+    "type": "list<float64>",
+    "description": "Infusion rate in each segment, mg/h."
+   },
+   {
+    "name": "dose_day1_mg",
+    "type": "float64",
+    "description": "Drug delivered in the first 24 h, mg."
+   },
+   {
+    "name": "dose_total_72h_mg",
+    "type": "float64",
+    "description": "Drug delivered over 72 h, mg."
+   },
+   {
+    "name": "dose_capped",
+    "type": "bool",
+    "description": "True when the daily ceiling cut the requested dose."
+   }
+  ]
+ },
+ "regimen_metrics": {
+  "rows": "100,000",
+  "description": "Pharmacodynamic and safety metrics of each regimen in the 48-72 h window, computed on a one-minute grid from the true concentrations.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "regimen",
+    "type": "string",
+    "description": "Regimen A-E."
+   },
+   {
+    "name": "ft_gt_mic_pct",
+    "type": "float64",
+    "description": "Percent of the window with free concentration at or above the MIC."
+   },
+   {
+    "name": "ft_gt_4mic_pct",
+    "type": "float64",
+    "description": "Percent of the window with free concentration at or above four times the MIC."
+   },
+   {
+    "name": "ft_ge50_flag",
+    "type": "bool",
+    "description": "fT>MIC reached 50 percent."
+   },
+   {
+    "name": "ft_full_flag",
+    "type": "bool",
+    "description": "fT>MIC reached 100 percent."
+   },
+   {
+    "name": "target_4mic_full_flag",
+    "type": "bool",
+    "description": "fT>4xMIC reached 100 percent."
+   },
+   {
+    "name": "cavg_free_over_mic",
+    "type": "float64",
+    "description": "Mean free concentration divided by the MIC."
+   },
+   {
+    "name": "css_in_4_8_flag",
+    "type": "bool",
+    "description": "Mean free concentration between 4 and 8 times the MIC."
+   },
+   {
+    "name": "cavg_total_mg_L",
+    "type": "float64",
+    "description": "Mean total concentration in the window, mg/L."
+   },
+   {
+    "name": "cmin_total_mg_L",
+    "type": "float64",
+    "description": "Lowest total concentration in the window, mg/L."
+   },
+   {
+    "name": "cmax_total_mg_L",
+    "type": "float64",
+    "description": "Highest total concentration in the window, mg/L."
+   },
+   {
+    "name": "cmin_free_mg_L",
+    "type": "float64",
+    "description": "Lowest free concentration in the window, mg/L."
+   },
+   {
+    "name": "neurotox_flag",
+    "type": "bool",
+    "description": "Lowest total concentration above the published neurotoxicity threshold."
+   },
+   {
+    "name": "nephrotox_flag",
+    "type": "bool",
+    "description": "Lowest total concentration above the published nephrotoxicity threshold."
+   },
+   {
+    "name": "steady_state_reached",
+    "type": "bool",
+    "description": "Mean concentration of 48-60 h and 60-72 h differ by less than 5 percent."
+   },
+   {
+    "name": "mero_in_8_16_flag",
+    "type": "bool",
+    "description": "Meropenem only: mean total concentration between 8 and 16 mg/L."
+   },
+   {
+    "name": "mero_above_24_flag",
+    "type": "bool",
+    "description": "Meropenem only: mean total concentration above 24 mg/L."
+   }
+  ]
+ },
+ "tdm_samples": {
+  "rows": "40,000",
+  "description": "Two blood samples per patient for regimen D, at 24 h and 48 h, with assay noise.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "regimen",
+    "type": "string",
+    "description": "Always D."
+   },
+   {
+    "name": "sample_idx",
+    "type": "int64",
+    "description": "1 or 2."
+   },
+   {
+    "name": "time_h",
+    "type": "float64",
+    "description": "Sampling time, h from start."
+   },
+   {
+    "name": "conc_measured_mg_L",
+    "type": "float64",
+    "description": "Measured total concentration, mg/L, with proportional assay error and a lower limit of quantification."
+   }
+  ]
+ },
+ "tdm_predictions": {
+  "rows": "60,000",
+  "description": "Predictions of the clinician's model for the samples, using only observable information: before any sample and after the first sample.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "sample_idx",
+    "type": "int64",
+    "description": "Sample the prediction refers to."
+   },
+   {
+    "name": "basis",
+    "type": "string",
+    "description": "prior_only or prior_and_sample_1."
+   },
+   {
+    "name": "predicted_mg_L",
+    "type": "float64",
+    "description": "Predicted total concentration, mg/L."
+   }
+  ]
+ },
+ "tdm_adjustments": {
+  "rows": "20,000",
+  "description": "Dose changes made in regimen D and the clearance estimates behind them.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int64",
+    "description": "Key."
+   },
+   {
+    "name": "rate_initial_mg_h",
+    "type": "float64",
+    "description": "Infusion rate before the first sample, mg/h."
+   },
+   {
+    "name": "rate_after_sample_1_mg_h",
+    "type": "float64",
+    "description": "Rate set after the first sample, mg/h."
+   },
+   {
+    "name": "rate_after_sample_2_mg_h",
+    "type": "float64",
+    "description": "Rate set after the second sample, mg/h."
+   },
+   {
+    "name": "estimated_clearance_after_sample_1_L_h",
+    "type": "float64",
+    "description": "Clearance estimated from sample 1, L/h."
+   },
+   {
+    "name": "estimated_clearance_after_sample_2_L_h",
+    "type": "float64",
+    "description": "Clearance estimated from samples 1 and 2, L/h."
+   }
+  ]
+ },
+ "pk_profiles": {
+  "rows": "43,300,000",
+  "description": "True concentration curves of all five regimens, every 10 minutes from 0 to 72 h.",
+  "columns": [
+   {
+    "name": "patient_id",
+    "type": "int32",
+    "description": "Key."
+   },
+   {
+    "name": "regimen",
+    "type": "string",
+    "description": "Regimen A-E."
+   },
+   {
+    "name": "time_min",
+    "type": "int16",
+    "description": "Minutes from start (0 to 4320)."
+   },
+   {
+    "name": "conc_total_mg_L",
+    "type": "float32",
+    "description": "True total concentration in plasma, mg/L."
+   },
+   {
+    "name": "conc_free_mg_L",
+    "type": "float32",
+    "description": "True unbound concentration, mg/L."
+   }
+  ]
+ },
+ "model_registry": {
+  "rows": "8",
+  "description": "The eight published population models that govern patients, with structure, covariate form, population and source.",
+  "columns": [
+   {
+    "name": "model_id",
+    "type": "string",
+    "description": "M1-M4, P1-P4."
+   },
+   {
+    "name": "drug",
+    "type": "string",
+    "description": "Drug."
+   },
+   {
+    "name": "structure",
+    "type": "string",
+    "description": "Compartment structure."
+   },
+   {
+    "name": "covariate_form",
+    "type": "string",
+    "description": "Covariate model for clearance."
+   },
+   {
+    "name": "population",
+    "type": "string",
+    "description": "Population of the source study."
+   },
+   {
+    "name": "doi_pmid",
+    "type": "string",
+    "description": "DOI and PMID."
+   },
+   {
+    "name": "year",
+    "type": "int64",
+    "description": "Publication year."
+   }
+  ]
+ },
+ "pathogen_mic": {
+  "rows": "133",
+  "description": "MIC distributions by species and drug used to draw patient MICs, with the epidemiological cut-off.",
+  "columns": [
+   {
+    "name": "drug",
+    "type": "string",
+    "description": "Drug."
+   },
+   {
+    "name": "species",
+    "type": "string",
+    "description": "Species."
+   },
+   {
+    "name": "mic_mg_L",
+    "type": "float64",
+    "description": "Dilution step, mg/L."
+   },
+   {
+    "name": "count",
+    "type": "int64",
+    "description": "Isolates at this step."
+   },
+   {
+    "name": "fraction",
+    "type": "float64",
+    "description": "Share of isolates."
+   },
+   {
+    "name": "n_total",
+    "type": "int64",
+    "description": "Isolates in the distribution."
+   },
+   {
+    "name": "ecoff_mg_L",
+    "type": "float64",
+    "description": "Epidemiological cut-off, mg/L."
+   },
+   {
+    "name": "source_ref",
+    "type": "string",
+    "description": "Source of the distribution."
+   }
+  ]
+ }
+}
