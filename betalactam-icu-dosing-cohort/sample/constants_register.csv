@@ -1,0 +1,217 @@
+group,parameter_id,description,value,unit,source_year,source_doi_pmid,evidence_level,notes
+model_M1,M1.CL,CL typical,13.7,L/h,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,2-cmt linear
+model_M1,M1.CRCL_REF,eCrCl(CG) reference,111.7,mL/min,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,equation Eq.2
+model_M1,M1.CRCL_EXP,exponent on eCrCl on CL,0.725,1,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,"equation gives 0.725, table gives 0.64; relative gap 12 percent (<20), equation used"
+model_M1,M1.V1,Vc,25.5,L,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.V2,Vp,12.4,L,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.Q,Q,8.1,L/h,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.CV_CL,IIV CL,57.8,%CV,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.CV_V1,IIV Vc,57.0,%CV,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.CV_V2,IIV Vp,74.4,%CV,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.CORR_CL_V1,corr eta CL-Vc,0.185,1,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.RES_ADD,additive residual,0.147,mg/L,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M1,M1.RES_PROP,proportional residual,31.1,%CV,2022,DOI 10.2147/IDR.S343264; PMID 35035223,value read directly from the cited source,
+model_M2,M2.CL,CL typical (CrCl form),15.3,L/h,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.CRCL_REF,CrCl(CG) reference in Eq.10,125.0,mL/min,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,flattened JATS formula CrCl/125 ^0.74; reference 125 read from 'CrCl1250.74'
+model_M2,M2.CRCL_EXP,exponent CrCl on CL,0.74,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.WT_EXP,allometric exponent LBM on CL (CVVH branch),0.75,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.LBM_REF,LBM reference,61.7,kg,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.V1,Vc typical,33.21,L,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,Vc = 33.21 * LBM/61.7
+model_M2,M2.Q,Q,14.1,L/h,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.V2,Vp base,13.45,L,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.TBSA_SLOPE,Vp slope per percent TBSA,0.71,L/%,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.CAT_CVVH_BURN,categorical CL factor CVVH and burn,-0.16,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.CAT_CVVH_NOBURN,categorical CL factor CVVH no burn,-0.58,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.W_CL,omega2 CL,0.31,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.W_V1,omega2 Vc,0.35,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.W_V2,omega2 Vp,0.61,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.CORR_CL_V1,corr eta Vc-CL,0.125,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M2,M2.RES_PROP,proportional residual (read as SD),0.22,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,table gives 0.22 without unit; read as SD (22 percent)
+model_M2,M2.RES_ADD,additive residual,0.0056,mg/L,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.SC_NOBURN,CVVH sieving coefficient no burn,0.99,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.SC_BURN,CVVH sieving coefficient burn,0.85,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.CF_NOBURN,CVVH correction factor no burn,0.87,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.CF_BURN,CVVH correction factor burn,0.89,1,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.QF_MEAN,ultrafiltrate flow mean no burn CVVH,32.7,mL/kg/h,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+crrt,M2.QF_SD,ultrafiltrate flow SD no burn CVVH,11.84,mL/kg/h,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+burn,M2.TBSA_MEAN,TBSA mean burn CVVH group,36.54,%,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+burn,M2.TBSA_SD,TBSA SD burn CVVH group,27.08,%,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+model_M3,M3.CL,theta1 CL,6.37,L/h,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,CL = theta1*(1+theta2*(CE-91.57))
+model_M3,M3.THETA2,theta2,0.00925,1,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.CE_REF,CKD-EPI centering,91.57,mL/min/1.73m2,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.V1,Vc,9.07,L,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.Q,Q,10.7,L/h,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.V2,Vp,7.91,L,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.CV_CL,IIV CL,31.4,%CV,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.CV_V1,IIV Vc,43.6,%CV,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.CV_V2,IIV Vp,36.6,%CV,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,
+model_M3,M3.RES_PROP,proportional residual,24.6,%,2021,DOI 10.3390/pharmaceutics13111861; PMID 34834278,value read directly from the cited source,power parameter 0.865 on RV not simulated; used only as MAP error weight
+model_M4,M4.CL,CL typical,7.4,L/h,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.EGFR_REF,eGFR reference,97.0,mL/min,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.EGFR_EXP,exponent eGFR on CL,0.58,1,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.SURG,surgery log-effect on CL,0.51,1,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,CL*exp(0.51)
+model_M4,M4.SURG_PREV,surgery in previous 24 h share,25.0,%,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,first-occasion share 6 of 24
+model_M4,M4.V1,V1,7.5,L,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.V2,V2,17.92,L,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.Q,Q,28.29,L/h,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.CV_CL,BSV CL,27.15,%,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.CV_V1,BSV V1,95.93,%,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.CV_Q,BSV Q,93.49,%,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.RES_ADD,additive residual,1.33,mg/L,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,
+model_M4,M4.RES_PROP,proportional residual (read as fraction),0.17,1,2025,DOI 10.1038/s41598-025-20630-5; PMID 41162440,value read directly from the cited source,"table column '(%)' prints 0.17, read as SD of 0.17"
+model_P1,P1.CL,CL typical,12.0,L/h,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,CL = 12.0*CKDEPI/99.24
+model_P1,P1.CRCL_REF,CKD-EPI reference,99.24,mL/min/1.73m2,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,
+model_P1,P1.V1,Vc,20.7,L,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,
+model_P1,P1.V2,Vp,62.4,L,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,
+model_P1,P1.Q,CLD (Q),4.77,L/h,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,
+model_P1,P1.W_CL,omega2 CL,0.19,1,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,IIV only on CL as published
+model_P1,P1.RES_VAR,sigma2 residual,0.14,1,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,value read directly from the cited source,"single residual term, read as proportional variance"
+model_P2,P2.V1,Vd (1-cmt),28.1,L,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CL_CRCL,renal CL at CrCl 120,5.1,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CRCL_REF,CrCl reference,120.0,mL/min,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CL_NR,non-renal CL,0.65,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CL_CRRT,CRRT CL at effluent 2 L/h,3.4,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.FLOW_REF,effluent reference,2.0,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CV_V1,IIV Vd,32.9,%CV,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CV_CL,IIV CL(CrCl),69.6,%CV,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.CV_CRRT,IIV CL(CRRT),24.5,%CV,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P2,P2.RES_PROP,proportional residual,25.0,%,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+crrt,P2.EFF_MEAN,CRRT effluent flow mean,2.75,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+crrt,P2.EFF_SD,CRRT effluent flow SD,1.1,L/h,2025,DOI 10.1128/aac.01760-25; PMID 41460103,value read directly from the cited source,
+model_P3,P3.CL,theta CL,9.4,L/h,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,CL=9.4*(1-0.092*ECMO)+0.115*(CrCL-54.7)
+model_P3,P3.ECMO,ECMO effect on CL,0.092,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.CRCL_SLOPE,CrCl slope,0.115,L/h per mL/min,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.CRCL_CENTER,CrCl centering,54.7,mL/min,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.V1,V1,6.56,L,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.CVVHDF_V1,CVVHDF effect on V1,1.46,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,V1*(1+1.46*CVVHDF)
+model_P3,P3.V2,V2,14.2,L,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.Q,Q,17.2,L/h,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.W_CL,omega2 CL,0.0523,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.W_V1,omega2 V1,0.291,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.W_V2,omega2 V2,0.138,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,
+model_P3,P3.RES_VAR,sigma2 proportional,0.0979,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,value read directly from the cited source,final model piperacillin row
+model_P4,P4.CL,linear CL,9.0,L/h,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,
+model_P4,P4.V1,V,6.18,L,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,
+model_P4,P4.V2,Vp,11.17,L,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,
+model_P4,P4.Q,Q,15.61,L/h,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,
+model_P4,P4.KM,Km,37.09,mg/L,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,
+model_P4,P4.VMAX,Vmax,353.57,mg/h,2019,DOI 10.1016/j.ijantimicag.2019.08.024; PMID 31479741,value read directly from the cited source,no IIV on Km and Vmax as published
+model_P4,P4.W_CL,omega2 CL borrowed from P3,0.0523,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,derived arithmetically from cited values,"P4 publishes no IIV; borrowed from P3 (same drug, same population type); no renal covariate in P4 abstract so CL is independent of CrCl in this world"
+model_P4,P4.W_V1,omega2 V borrowed from P3,0.291,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,derived arithmetically from cited values,borrowed from P3 V1
+model_P4,P4.W_V2,omega2 Vp borrowed from P3,0.138,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,derived arithmetically from cited values,borrowed from P3 V2
+model_P4,P4.RES_VAR,sigma2 borrowed from P3,0.0979,1,2021,DOI 10.1128/Spectrum.00633-21; PMID 34937189,derived arithmetically from cited values,borrowed from P3
+lbm,LBM.M_A,LBM male numerator,9270.0,1,2005,"DOI 10.2165/00003088-200544100-00004; PMID 16176118 (original); coefficients restated in DOI 10.1186/2050-6511-14-53, PMID 24499708 (both sexes) and DOI 10.1111/anae.13101, PMID 25950621 (male)",value read directly from the cited source,LBM = 9270*WT/(6680+216*BMI) male
+lbm,LBM.M_B,LBM male intercept,6680.0,1,2005,"DOI 10.2165/00003088-200544100-00004; PMID 16176118 (original); coefficients restated in DOI 10.1186/2050-6511-14-53, PMID 24499708 (both sexes) and DOI 10.1111/anae.13101, PMID 25950621 (male)",value read directly from the cited source,
+lbm,LBM.M_C,LBM male BMI coef,216.0,1,2005,"DOI 10.2165/00003088-200544100-00004; PMID 16176118 (original); coefficients restated in DOI 10.1186/2050-6511-14-53, PMID 24499708 (both sexes) and DOI 10.1111/anae.13101, PMID 25950621 (male)",value read directly from the cited source,
+lbm,LBM.F_B,LBM female intercept,8780.0,1,2005,"DOI 10.2165/00003088-200544100-00004; PMID 16176118 (original); coefficients restated in DOI 10.1186/2050-6511-14-53, PMID 24499708 (both sexes) and DOI 10.1111/anae.13101, PMID 25950621 (male)",value read directly from the cited source,
+lbm,LBM.F_C,LBM female BMI coef,244.0,1,2005,"DOI 10.2165/00003088-200544100-00004; PMID 16176118 (original); coefficients restated in DOI 10.1186/2050-6511-14-53, PMID 24499708 (both sexes) and DOI 10.1111/anae.13101, PMID 25950621 (male)",value read directly from the cited source,
+fu,FU.MERO_MEAS,mero fu measured median,0.625,1,2013,PMID 23642005,value read directly from the cited source,range 41.6-99.1
+fu,FU.MERO_MEAS_LO,mero fu measured min,0.416,1,2013,PMID 23642005,value read directly from the cited source,
+fu,FU.MERO_MEAS_HI,mero fu measured max,0.991,1,2013,PMID 23642005,value read directly from the cited source,
+fu,FU.PIP_MEAS,pip fu measured median,0.483,1,2013,PMID 23642005,value read directly from the cited source,range 39.4-71.3
+fu,FU.PIP_MEAS_LO,pip fu measured min,0.394,1,2013,PMID 23642005,value read directly from the cited source,
+fu,FU.PIP_MEAS_HI,pip fu measured max,0.713,1,2013,PMID 23642005,value read directly from the cited source,
+fu,FU.MERO_REF,mero fu reference (1 - 2 percent bound),0.98,1,2014,PMC4056350,derived arithmetically from cited values,arithmetic: 1 - 0.02
+fu,FU.PIP_REF,pip fu reference (1 - 30 percent bound),0.7,1,2014,PMC4056350,derived arithmetically from cited values,arithmetic: 1 - 0.30
+fu,FU.RANGE_SD_DIV,range-to-SD divisor on logit scale,4.5,1,2013,PMID 23642005,derived arithmetically from cited values,"SD(logit) = (logit(max)-logit(min))/4.5; sample size of source range not captured, divisor is a derivation convention declared in design_decisions"
+renal,RENAL.ARC_PREV,ARC prevalence central,0.334,1,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,range axis 20-65 percent
+renal,RENAL.ARC_THR,ARC threshold,130.0,mL/min/1.73m2,2018,DOI 10.1007/s40262-018-0636-7; PMID 29441476,value read directly from the cited source,
+renal,RENAL.ARC_LO,ARC prevalence axis low,0.2,1,2018,PMID 29441476,value read directly from the cited source,
+renal,RENAL.ARC_HI,ARC prevalence axis high,0.65,1,2018,PMID 29441476,value read directly from the cited source,
+renal,RENAL.U_ARC_MED,urinary CrCl at ARC onset median,150.6,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.U_ARC_Q1,urinary CrCl at ARC onset Q1,137.2,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.U_ARC_Q3,urinary CrCl at ARC onset Q3,176.9,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.CG_ARC_MED,Cockcroft-Gault at ARC onset median,103.6,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.CG_ARC_Q1,Cockcroft-Gault at ARC onset Q1,86.3,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.CG_ARC_Q3,Cockcroft-Gault at ARC onset Q3,133.5,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.EPI_ARC_MED,CKD-EPI at ARC onset median,88.7,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.EPI_ARC_Q1,CKD-EPI at ARC onset Q1,79.9,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.EPI_ARC_Q3,CKD-EPI at ARC onset Q3,100.5,mL/min/1.73m2,2023,DOI 10.1186/s40560-023-00660-9,value read directly from the cited source,
+renal,RENAL.U_ALL_MED,urinary CrCl all patients median (DALI),62.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,IQR 31-107
+renal,RENAL.U_ALL_Q1,urinary CrCl all patients Q1 (DALI),31.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+renal,RENAL.U_ALL_Q3,urinary CrCl all patients Q3 (DALI),107.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+renal,RENAL.CG_ALL_MED,calculated CrCl median infected (DALI),82.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,"treated-for-infection column, matches U 64 (32-103) in same column"
+renal,RENAL.U_INF_MED,urinary CrCl median infected (DALI),64.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+renal,RENAL.U_INF_Q1,urinary CrCl Q1 infected (DALI),32.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+renal,RENAL.U_INF_Q3,urinary CrCl Q3 infected (DALI),103.0,mL/min,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.MALE,male share infected,0.65,1,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.AGE_MED,age median infected,60.0,y,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.AGE_Q1,age Q1 infected,48.0,y,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.AGE_Q3,age Q3 infected,74.0,y,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.WT_MED,weight median infected,78.0,kg,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.WT_Q1,weight Q1 infected,65.0,kg,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.WT_Q3,weight Q3 infected,86.0,kg,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+demography,DEMO.BMI_MED,BMI median (pip ICU cohort),26.2,kg/m2,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+demography,DEMO.BMI_Q1,BMI Q1,23.0,kg/m2,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+demography,DEMO.BMI_Q3,BMI Q3,29.0,kg/m2,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+demography,DEMO.ALB_MED,albumin median,29.0,g/L,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+demography,DEMO.ALB_Q1,albumin Q1,26.0,g/L,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+demography,DEMO.ALB_Q3,albumin Q3,33.0,g/L,2023,DOI 10.3390/antibiotics12030531,value read directly from the cited source,
+thresholds,PD.NEURO_PIP,neurotox Cmin pip,361.4,mg/L,2017,DOI 10.1093/jac/dkx209,value read directly from the cited source,
+thresholds,PD.NEURO_MERO,neurotox Cmin mero,64.2,mg/L,2017,DOI 10.1093/jac/dkx209,value read directly from the cited source,
+thresholds,PD.NEPHRO_PIP,nephrotox Cmin pip,452.65,mg/L,2017,DOI 10.1093/jac/dkx209,value read directly from the cited source,
+thresholds,PD.NEPHRO_MERO,nephrotox Cmin mero,44.45,mg/L,2017,DOI 10.1093/jac/dkx209,value read directly from the cited source,
+thresholds,PD.CSS_LO,Css target lower multiple of MIC,4.0,xMIC,2022,DOI 10.1186/s13054-022-04050-9,value read directly from the cited source,
+thresholds,PD.CSS_HI,Css target upper multiple of MIC,8.0,xMIC,2022,DOI 10.1186/s13054-022-04050-9,value read directly from the cited source,
+thresholds,PD.CAP_PIP,max daily piperacillin,32000.0,mg/day,2026,NCT07820501,value read directly from the cited source,
+thresholds,PD.CAP_MERO,max daily meropenem,12000.0,mg/day,2026,NCT07820501,value read directly from the cited source,
+thresholds,PD.MERO_WIN_LO,mero CI window low,8.0,mg/L,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+thresholds,PD.MERO_WIN_HI,mero CI window high,16.0,mg/L,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+label,LBL.MERO_DOSE,mero label dose,1000.0,mg,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.MERO_INT,mero label interval CrCl>50,8.0,h,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.MERO_INF,mero label infusion time,0.5,h,2026,DailyMed meropenem SPL,value read directly from the cited source,upper end of 15-30 min
+label,LBL.MERO_T1,mero label CrCl threshold 1,50.0,mL/min,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.MERO_T2,mero label CrCl threshold 2,25.0,mL/min,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.MERO_T3,mero label CrCl threshold 3,10.0,mL/min,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.PIP_DOSE,pip-tazo label nosocomial pneumonia dose,4.5,g,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,4.5 g = 4 g piperacillin + 0.5 g tazobactam
+label,LBL.PIP_PIPFRAC,piperacillin share of pip-tazo 4.5 g,4.0,g,2026,DailyMed piperacillin-tazobactam SPL; EUCAST Dosages v16.0,value read directly from the cited source,
+label,LBL.PIP_INT,pip-tazo interval,6.0,h,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+label,LBL.PIP_INF,pip-tazo infusion time,0.5,h,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+label,LBL.PIP_T1,pip-tazo CrCl threshold 1,40.0,mL/min,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+label,LBL.PIP_T2,pip-tazo CrCl threshold 2,20.0,mL/min,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+regimen,EXT.INF,extended infusion duration,3.0,h,2013,DOI 10.1186/cc12705,value read directly from the cited source,
+regimen,EXT.LOAD_MIN,loading infusion duration,0.5,h,2013,DOI 10.1186/cc12705,value read directly from the cited source,
+regimen,CI.MERO_LO,mero continuous daily dose low,3000.0,mg/day,2022,DOI 10.1111/bcp.15138,value read directly from the cited source,
+regimen,CI.MERO_HI,mero continuous daily dose high,6000.0,mg/day,2022,DOI 10.1111/bcp.15138,value read directly from the cited source,
+regimen,CI.PIP_LO,pip continuous daily dose low (piperacillin),8.0,g/day,2020,PMID 32284376,value read directly from the cited source,
+regimen,CI.PIP_MID,pip continuous daily dose mid,12.0,g/day,2020,PMID 32284376,value read directly from the cited source,
+regimen,CI.PIP_HI,pip continuous daily dose high,16.0,g/day,2020,PMID 32284376,value read directly from the cited source,
+assay,ASSAY.PIP_CV,assay CV piperacillin max,7.11,%,2026,DOI 10.1039/d6ay00331a; PMID 42171260,value read directly from the cited source,
+assay,ASSAY.MERO_CV,assay CV meropenem max,3.7,%,2026,DOI 10.1039/d6ay00331a; PMID 42171260,value read directly from the cited source,
+assay,ASSAY.LLOQ,assay LLOQ,0.02,mg/L,2026,DOI 10.1039/d6ay00331a; PMID 42171260,value read directly from the cited source,
+breakpoints,BP.MERO_ENT_S,mero Enterobacterales S<=,2.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.MERO_ENT_R,mero Enterobacterales R>,8.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.MERO_PSA_S,mero P. aeruginosa S<=,2.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.MERO_PSA_R,mero P. aeruginosa R>,8.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.MERO_ACI_S,mero Acinetobacter S<=,2.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.MERO_ACI_R,mero Acinetobacter R>,8.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.PT_ENT_S,pip-tazo Enterobacterales S<=,8.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,printed as '85 85' = 8 with note 5 on each side
+breakpoints,BP.PT_ENT_R,pip-tazo Enterobacterales R>,8.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,
+breakpoints,BP.PT_PSA_S,pip-tazo P. aeruginosa S<=,0.001,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,printed '0.0011' = 0.001 with note 1
+breakpoints,BP.PT_PSA_R,pip-tazo P. aeruginosa R>,16.0,mg/L,2026,EUCAST Breakpoint Tables v16.0,value read directly from the cited source,printed '161' = 16 with note 1
+label,LBL.PIP_SHARE,piperacillin share of pip-tazo total (16 g of 18 g),0.8889,1,2026,DailyMed piperacillin-tazobactam SPL,derived arithmetically from cited values,arithmetic 16/18 from the label sentence totaling 18 g
+label,LBL.PIP_D2,pip-tazo dose at CrCl 20-40 (nosocomial pneumonia),3.375,g,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+label,LBL.PIP_D3,pip-tazo dose at CrCl <20 (nosocomial pneumonia),2.25,g,2026,DailyMed piperacillin-tazobactam SPL,value read directly from the cited source,
+label,LBL.MERO_HALF,mero reduced dose,500.0,mg,2026,DailyMed meropenem SPL,value read directly from the cited source,one-half of 1 gram
+label,LBL.MERO_Q12,mero interval at CrCl 26-50 and 10-25,12.0,h,2026,DailyMed meropenem SPL,value read directly from the cited source,
+label,LBL.MERO_Q24,mero interval at CrCl <10,24.0,h,2026,DailyMed meropenem SPL,value read directly from the cited source,
+renal,CRRT.CVVH_EST_MEAN,"CrCl by Cockcroft-Gault in CVVH patients without burn, mean",105.69,mL/min,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,"serum creatinine is filtered by CVVH, estimate not reflective"
+renal,CRRT.CVVH_EST_SD,"same, SD",69.55,mL/min,2022,DOI 10.1111/bcp.15138; PMID 34773921,value read directly from the cited source,
+thresholds,PD.MERO_ABOVE,mero CI harmful exposure above,24.0,mg/L,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+validation,VAL.C02_IN_WIN,reference study share in 8-16 mg/L,60.0,%,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+validation,VAL.C02_ABOVE,reference study share above 24 mg/L,10.0,%,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+validation,VAL.C51_NO50,DALI share without 50 percent fT>MIC,16.0,%,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+validation,VAL.C51_BOLUS,DALI bolus share without 50 percent fT>MIC,20.0,%,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+validation,VAL.C51_EXT,DALI extended share without 50 percent fT>MIC,7.0,%,2014,DOI 10.1093/cid/ciu027,value read directly from the cited source,
+validation,VAL.C04_MAPE_LO,reference study a priori MAPE low,35.7,%,2023,DOI 10.1007/s00134-023-07154-0,value read directly from the cited source,
+validation,VAL.C04_MAPE_HI,reference study a priori MAPE high,135.6,%,2023,DOI 10.1007/s00134-023-07154-0,value read directly from the cited source,
+validation,VAL.C04_B1_LO,reference study MAPE after one sample low,26.2,%,2023,DOI 10.1007/s00134-023-07154-0,value read directly from the cited source,
+validation,VAL.C04_B1_HI,reference study MAPE after one sample high,77.7,%,2023,DOI 10.1007/s00134-023-07154-0,value read directly from the cited source,
+validation,VAL.C02_TARGET_LO,reference study MIPD/TDM target attainment low,56.0,%,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+validation,VAL.C02_TARGET_HI,reference study MIPD/TDM target attainment high,71.0,%,2023,DOI 10.3390/antibiotics12071112,value read directly from the cited source,
+model_P4,P4.FR_REN,renal fraction of piperacillin elimination,0.68,1,2025,"DailyMed SPL 6a894b94-171f-4217-81a2-0e84796b0b41 (piperacillin and tazobactam for injection label, effective 2025-04-11)",value read directly from the cited source,68 percent of the dose excreted unchanged in urine; used to give the P4 linear clearance a renal part
+model_P4,P4.CRCL_REF,CrCl at which P4 typical CL applies,99.24,mL/min/1.73m2,2023,DOI 10.3390/antibiotics12030531; PMID 36978398,derived arithmetically from cited values,P4 abstract gives no population CrCl; the CKD-EPI median of the ICU continuous-infusion piperacillin cohort (P1) is used as the reference
+species,SPECIES.KLEB_N,"Klebsiella species, patients with the organism among gram-negative culture-positive ICU patients",973.0,patients,2020,DOI 10.1001/jama.2020.2717,value read directly from the cited source,species weight within drug = count / sum of counts of the species the drug covers; genus-level counts applied to the modelled species
+species,SPECIES.ECOLI_N,"Escherichia coli, patients with the organism among gram-negative culture-positive ICU patients",902.0,patients,2020,DOI 10.1001/jama.2020.2717,value read directly from the cited source,species weight within drug = count / sum of counts of the species the drug covers; genus-level counts applied to the modelled species
+species,SPECIES.PSA_N,"Pseudomonas species, patients with the organism among gram-negative culture-positive ICU patients",850.0,patients,2020,DOI 10.1001/jama.2020.2717,value read directly from the cited source,species weight within drug = count / sum of counts of the species the drug covers; genus-level counts applied to the modelled species
+species,SPECIES.ACI_N,"Acinetobacter species, patients with the organism among gram-negative culture-positive ICU patients",602.0,patients,2020,DOI 10.1001/jama.2020.2717,value read directly from the cited source,species weight within drug = count / sum of counts of the species the drug covers; genus-level counts applied to the modelled species
