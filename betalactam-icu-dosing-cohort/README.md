@@ -4,7 +4,7 @@
 > **Full dataset (20,000 patients, 100,000 patient-regimens, 10 linked tables):** **[sentineldata.com.ua/dataset/betalactam-icu-dosing-cohort](https://sentineldata.com.ua/dataset/betalactam-icu-dosing-cohort)**
 
 **DOI (Zenodo):** [10.5281/zenodo.24376814](https://doi.org/10.5281/zenodo.24376814)
-**Also archived:** [Kaggle (free sample)](https://www.kaggle.com/datasets/corot7b/betalactam-icu-dosing-cohort) · [Hugging Face](https://huggingface.co/datasets/codesentineldata/betalactam-icu-dosing-cohort)
+**Also archived:** [Kaggle (free sample)](https://www.kaggle.com/datasets/corot7b/betalactam-icu-dosing-cohort) · [Hugging Face (DOI 10.57967/hf/11719)](https://doi.org/10.57967/hf/11719)
 
 **Status: MODEL-GENERATED / HYPOTHETICAL.** Fully synthetic data from published population pharmacokinetic models. No real patient stands behind any row. It supports benchmarking and method development for beta-lactam dosing and drug monitoring; it is not clinical evidence.
 
