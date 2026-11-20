@@ -20,6 +20,7 @@ Each dataset lives in its own folder: a free row-level sample, the exact validat
 | Hospital Antibiotic Resistance Counterfactual Cohort | [`hospital-antibiotic-resistance-counterfactual-cohort/`](hospital-antibiotic-resistance-counterfactual-cohort/) | [sentineldata.com.ua/dataset/hospital-antibiotic-resistance-counterfactual-cohort](https://sentineldata.com.ua/dataset/hospital-antibiotic-resistance-counterfactual-cohort) |
 | Progeria Counterfactual Trajectories | [`progeria-counterfactual-trajectories/`](progeria-counterfactual-trajectories/) | [sentineldata.com.ua/dataset/progeria-counterfactual-trajectories](https://sentineldata.com.ua/dataset/progeria-counterfactual-trajectories) |
 | Beta-Lactam ICU Dosing Cohort | [`betalactam-icu-dosing-cohort/`](betalactam-icu-dosing-cohort/) | [sentineldata.com.ua/dataset/betalactam-icu-dosing-cohort](https://sentineldata.com.ua/dataset/betalactam-icu-dosing-cohort) |
+| Combat Amputation and Prosthetic Rehabilitation (CAPR) | [`capr-combat-amputation-prosthetic-rehabilitation/`](capr-combat-amputation-prosthetic-rehabilitation/) | [sentineldata.com.ua/dataset/capr-combat-amputation-prosthetic-rehabilitation](https://sentineldata.com.ua/dataset/capr-combat-amputation-prosthetic-rehabilitation) |
 
 ## Status
 
